@@ -1,0 +1,71 @@
+/*-----Containers-----*/
+
+#content-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+#body-wrapper {}
+
+* {
+    box-sizing: border-box;
+}
+
+.main-title {}
+
+.container-fluid {
+    overflow-x: hidden;
+}
+
+.game-info-container {
+    background-color: rgb(198, 206, 206);
+    padding: 120px, 0;
+}
+
+.deck-container {}
+
+.game-info {
+    float: left;
+    padding: 120px, 0;
+}
+
+.game-container {
+    background-color: rgb(166, 211, 250);
+    width: 100%;
+}
+
+.hero-card {
+    height: 125px;
+    padding: 0;
+    background-color: blueviolet;
+}
+
+
+/*-----Background Image-----*/
+
+.dc-background {
+    background-image: url("../images/dc/dc_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.marvel-background {
+    background-image: url("../images/marvel/marvel_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+/*-----Background Image-----*/
