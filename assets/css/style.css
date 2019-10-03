@@ -19,15 +19,10 @@
     box-sizing: border-box;
 }
 
-.main-title {}
-
-.container-fluid {
-    overflow-x: hidden;
-}
-
 .game-info-container {
     background-color: rgb(198, 206, 206);
     padding: 120px, 0;
+    margin-bottom: 5px;
 }
 
 .deck-container {}
@@ -42,11 +37,73 @@
     width: 100%;
 }
 
-.hero-card {
-    height: 125px;
-    padding: 0;
-    background-color: blueviolet;
+main {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
+
+.main-title {}
+
+.container-fluid {
+    overflow-x: hidden;
+}
+
+
+/*-----/Containers-----*/
+
+
+/*-----Cards-----*/
+
+.hero-card-container {
+    display: flex;
+}
+
+.dc-card-back {
+    background-image: url("../images/dc/dc_logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.marvel-card-back {
+    background-image: url("../images/marvel/marvel_logo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero-card {
+    cursor: pointer;
+    height: 125px;
+    width: 125px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: scale(1);
+}
+
+.hero-card:hover {
+    transform: scale(.97);
+    transition-duration: .2s;
+}
+
+.hero-card.flip {
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+.images {
+    height: 125px;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+
+/*-----/Cards-----*/
 
 
 /*-----Background Image-----*/
