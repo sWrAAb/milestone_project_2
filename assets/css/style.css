@@ -56,7 +56,7 @@ main {
 
 /*-----Cards-----*/
 
-.hero-card-container {
+#hero-card-container {
     display: flex;
 }
 
@@ -126,3 +126,6 @@ main {
 
 
 /*-----Background Image-----*/
+
+
+/*-----Modal-----*/
