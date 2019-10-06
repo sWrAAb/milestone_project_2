@@ -17,6 +17,7 @@
 
 * {
     box-sizing: border-box;
+    max-height: 100vh;
 }
 
 .game-info-container {
@@ -106,6 +107,20 @@ main {
 /*-----/Cards-----*/
 
 
+/*-----Starting Page-----*/
+
+#starting-page {
+    height: 100vh;
+    background: black;
+    text-align: center;
+}
+
+#game-logo {}
+
+
+/*-----/Starting Page-----*/
+
+
 /*-----Background Image-----*/
 
 .dc-background {
@@ -129,3 +144,16 @@ main {
 
 
 /*-----Modal-----*/
+
+.modal-backdrop.in {
+    opacity: 0.9;
+}
+
+.modal-image {
+    height: 200px;
+    width: 200px;
+    float: left;
+}
+
+
+/*-----/Modal-----*/
