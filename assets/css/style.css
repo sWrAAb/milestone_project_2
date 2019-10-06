@@ -97,16 +97,16 @@ main {
     border: 2px solid grey;
     border-radius: 10px;
     overflow: hidden;
-    transform: scale(1);
+    perspective: 1000px;
 }
 
 .hero-card-back-logo {
     width: 100%;
 }
 
-.hero-card:hover {
+.hero-card:active {
     transform: rotateY(180deg);
-    transform: scale(.97);
+    transform: scale(.57);
     transition-duration: .2s;
 }
 
@@ -127,7 +127,7 @@ main {
     transform: rotateY(180deg);
 }
 
-.hero-card.visible .hero-card {
+.hero-card.visible .hero-card-front {
     transform: rotateY(0)
 }
 

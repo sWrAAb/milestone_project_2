@@ -10,7 +10,7 @@ $(document).ready(function() {
         $("#dc-game").removeClass("d-none");
         $("#marvel-game").addClass("d-none");
         $("#body-wrapper").removeClass("d-none");
-        $(".container-fluid").addClass("dc-background")
+        $(".container-fluid").addClass("dc-background");
     });
 
     $("#marvel-modal-image").click(function() {
@@ -22,14 +22,12 @@ $(document).ready(function() {
     });
 
     $(".hero-card").click(function() {
-        $(this).removeClass("hero-card-back").addClass("hero-card-front")
+        $(this).removeClass("hero-card-back").addClass("hero-card-front");
     })
 
 
     $(".hero-card-back").click(function() {
-
-        console.log("clicked");
-        console.log(this);
+        $(this).hide("hero-card-back").show("hero-card-front");
     });
 
 });
