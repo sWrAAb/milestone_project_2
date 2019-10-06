@@ -3,23 +3,36 @@ $(window).on("load", function() {
     $("#body-wrapper").addClass("d-none");
 });
 
+
 $(document).ready(function() {
     $("#dc-modal-image").click(function() {
         $("#starting-page").addClass("d-none");
-        $("#marvel-game").hide();
-        $("#dc-game").show();
+        $("#dc-game").removeClass("d-none");
+        $("#marvel-game").addClass("d-none");
         $("#body-wrapper").removeClass("d-none");
-
+        $(".container-fluid").addClass("dc-background")
     });
+
     $("#marvel-modal-image").click(function() {
         $("#starting-page").addClass("d-none");
-        $("#dc-game").hide();
-        $("#marvel-game").show();
+        $("#dc-game").addClass("d-none");
+        $("#marvel-game").removeClass("d-none");
         $("#body-wrapper").removeClass("d-none");
-
+        $(".container-fluid").addClass("marvel-background")
     });
-})
 
+    $(".hero-card").click(function() {
+        $(this).removeClass("hero-card-back").addClass("hero-card-front")
+    })
+
+
+    $(".hero-card-back").click(function() {
+
+        console.log("clicked");
+        console.log(this);
+    });
+
+});
 
 
 

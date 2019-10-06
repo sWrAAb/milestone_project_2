@@ -1,5 +1,9 @@
 /*-----Containers-----*/
 
+html body {
+    height 100vh;
+}
+
 #content-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -13,7 +17,9 @@
     flex-direction: column;
 }
 
-#body-wrapper {}
+#body-wrapper {
+    min-height: 100vh;
+}
 
 * {
     box-sizing: border-box;
@@ -21,8 +27,6 @@
 }
 
 .game-info-container {
-    background-color: rgb(198, 206, 206);
-    padding: 120px, 0;
     margin-bottom: 5px;
 }
 
@@ -30,11 +34,9 @@
 
 .game-info {
     float: left;
-    padding: 120px, 0;
 }
 
 .game-container {
-    background-color: rgb(166, 211, 250);
     width: 100%;
 }
 
@@ -45,14 +47,41 @@ main {
     flex: 1;
 }
 
+
+/*-----/Containers-----*/
+
+
+/*----Game Title----*/
+
 .main-title {}
+
+.game-title {
+    font-size: 30px;
+    color: #fafafa;
+    padding-top: 40px;
+}
 
 .container-fluid {
     overflow-x: hidden;
 }
 
 
-/*-----/Containers-----*/
+/*-----Starting Page-----*/
+
+#starting-page {
+    height: 100vh;
+    background: black;
+    text-align: center;
+    position: relative;
+}
+
+#game-logo {
+    padding-top: 30vh;
+    width: 100vw;
+}
+
+
+/*-----/Starting Page-----*/
 
 
 /*-----Cards-----*/
@@ -61,31 +90,22 @@ main {
     display: flex;
 }
 
-.dc-card-back {
-    background-image: url("../images/dc/dc_logo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-.marvel-card-back {
-    background-image: url("../images/marvel/marvel_logo.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
 .hero-card {
     cursor: pointer;
-    height: 125px;
-    width: 125px;
+    height: 100px;
+    width: 100px;
     border: 2px solid grey;
     border-radius: 10px;
     overflow: hidden;
     transform: scale(1);
 }
 
+.hero-card-back-logo {
+    width: 100%;
+}
+
 .hero-card:hover {
+    transform: rotateY(180deg);
     transform: scale(.97);
     transition-duration: .2s;
 }
@@ -98,9 +118,17 @@ main {
 }
 
 .images {
-    height: 125px;
+    height: 100px;
     width: 100%;
     background-color: aliceblue;
+}
+
+.hero-card.visible .hero-card-back {
+    transform: rotateY(180deg);
+}
+
+.hero-card.visible .hero-card {
+    transform: rotateY(0)
 }
 
 
@@ -129,6 +157,7 @@ main {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    height: 100vh;
 }
 
 .marvel-background {
@@ -137,6 +166,7 @@ main {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    height: 100vh;
 }
 
 
@@ -145,15 +175,66 @@ main {
 
 /*-----Modal-----*/
 
-.modal-backdrop.in {
-    opacity: 0.9;
+.modal-image {
+    height: 140px;
+    width: 140px;
+    float: left;
 }
 
-.modal-image {
-    height: 200px;
-    width: 200px;
-    float: left;
+.modal-body {
+    max-width: 100vw;
+    justify-content: space-between;
+}
+
+h5 {
+    text-align: center;
 }
 
 
 /*-----/Modal-----*/
+
+
+/*-----Media Queries-----*/
+
+@media screen and (min-width: 768px) {
+    .modal-image {
+        height: 220px;
+        width: 220px;
+    }
+    .hero-card {
+        cursor: pointer;
+        height: 200px;
+        width: 200px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        overflow: hidden;
+        transform: scale(1);
+    }
+    .images {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hero-card {
+        cursor: pointer;
+        height: 233px;
+        width: 233px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        overflow: hidden;
+        transform: scale(1);
+    }
+    .images {
+        height: 233px;
+        width: 100%;
+    }
+    #game-logo {
+        padding-top: 50px;
+        width: 60vw;
+    }
+}
+
+
+/*-----/Media Queries-----*/
