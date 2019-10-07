@@ -10,3 +10,5 @@
 
 
 velocity animation https://dzone.com
+
+flip card animation: https://www.w3schools.com

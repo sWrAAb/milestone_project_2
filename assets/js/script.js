@@ -20,17 +20,16 @@ $(document).ready(function() {
         $("#marvel-game").removeClass("d-none");
         $("#body-wrapper").removeClass("d-none");
         $(".container-fluid").removeClass("dc-background")
-            .addClass("marvel-background")
+            .addClass("marvel-background");
+        $(".front").hidden;
     });
 
     $(".hero-card").click(function() {
-        $(this).removeClass("hero-card-back").addClass("hero-card-front");
+        $(this).flip();
+        console.log(this);
     })
 
 
-    $(".hero-card-back").click(function() {
-        $(this).hide("hero-card-back").show("hero-card-front");
-    });
 
     $(".link-info-container").click(function() {
         $("#myModal").modal("show");

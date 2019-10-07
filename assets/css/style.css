@@ -60,9 +60,11 @@
  .link-info-container {
      color: rgb(165, 3, 3);
      float: left;
+     display: inline;
  }
  
  .link-text {
+     display: inline;
      font-family: 'Bangers', cursive;
      color: rgb(165, 3, 3);
      float: left;
@@ -101,18 +103,8 @@
      transform-style: preserve-3d;
  }
  
- .hero-card-back-logo {
+ .back-logo {
      width: 100%;
- }
- 
- .hero-card:active {
-     transform: rotateY(180deg);
-     transform: scale(.57);
-     transition-duration: .2s;
- }
- 
- .hero-card.flip {
-     transform: rotateY( 180deg);
  }
  
  .images {
@@ -120,15 +112,41 @@
      width: 100%;
      background-color: aliceblue;
  }
+ /*-----/Cards-----*/
+ /*----Flip CSS----*/
  
- .hero-card.visible .hero-card-back {
+ .game-container {
+     perspective: 1000px;
+ }
+ 
+ .game-container:hover .flipper,
+ .game-container.hover .flipper {
      transform: rotateY(180deg);
  }
  
- .hero-card.visible .hero-card-front {
-     transform: rotateY(0)
+ .flipper {
+     transition: 1s;
+     transform-style: preserve-3d;
+     position: relative;
  }
- /*-----/Cards-----*/
+ 
+ .front,
+ .back {
+     backface-visibility: hidden;
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+ 
+ .front {
+     transform: rotateY(0deg);
+ }
+ 
+ .back {
+     z-index: 2;
+     transform: rotateY(180deg);
+ }
+ /*----/Flip CSS----*/
  /*-----Starting Page-----*/
  
  #starting-page {
