@@ -8,6 +8,7 @@
 
     <script src="https://kit.fontawesome.com/bf032aaab3.js" crossorigin="anonymous"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
@@ -36,14 +37,22 @@
 
                         <h1 class="main-title text-center">Match Heroes</h1>
 
-                        <div class="button-info-container">
-                            <i class="fas fa-adjust"></i>
+                        <div class="col-12 link-info-container" data-toggle="modal" data-target="#universe-select-modal">
+
+                            <div class="col-6 m-0 p-0"> <i class="fas fa-adjust" data-target="#universe-"></i> </div>
+
+                            <div class="col-6 m-0 p-0">
+                                <h3 class="link-text" data-target="#myModal">Choose Universe</h3>
+                            </div>
+
+
                         </div>
+
                     </div>
 
                     <div class="col-12 game-info-container">
 
-                        <div class="col-6 game-info text-center">
+                        <div class="col-6  game-info text-center">
                             Time <span id="time-remaining">90</span>
                         </div>
                         <div class="col-6 game-info text-center">
@@ -417,7 +426,7 @@
 
                                 <div class="hero-card-front ">
 
-                                    <img src="assets\images\heroes_marvel\wolverine.png" class="images " alt="Wolverine">
+                                    <img src="assets/images/heroes_marvel/wolverine.png" class="images " alt="Wolverine">
 
                                 </div>
 
@@ -537,7 +546,7 @@
 
                                 <div class="hero-card-front ">
 
-                                    <img src="assets\images\heroes_marvel\wolverine.png" class="images " alt="Wolverine">
+                                    <img src="assets/images/heroes_marvel/wolverine.png" class="images " alt="Wolverine">
 
                                 </div>
                             </div>
@@ -558,7 +567,7 @@
 
     <!--Modals-->
 
-    <div class="modal" id="world-select-modal" tabindex="-1" role="dialog" data-keyboard="false">
+    <div class="modal" id="universe-select-modal" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header mx-auto ">
@@ -576,31 +585,8 @@
             </div>
         </div>
     </div>
-    </div>
 
 
-    <!---
-    <div class="modal " id="world-select-modal " data-backdrop="static " data-keyboard="false " aria-labelledby="world-select-modal " tabindex="-1 " role="dialog ">
-        <div class="modal-dialog " role="document ">
-            <div class="modal-content ">
-                <div class="modal-header ">
-                    <h5 class="modal-title text-center ">Choose Universe</h5>
-                    <button type="button " class="close " data-dismiss="modal " aria-label="Close "></button>
-                    <span aria-hidden="true ">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body ">
-                    <div class="dc-modal-select "></div>
-                    <img id="dc-modal-image " class="modal-image " data-dismiss="modal " src="assets/images/dc/dc_logo.jpg " alt="DC ">
-                </div>
-
-                <img id="marvel-modal-image " class="modal-image " data-dismiss="modal " src="assets/images/marvel/marvel_logo.jpeg " alt="Marvel ">
-
-            </div>
-
-        </div>
-    </div>
--->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js "></script>

@@ -1,5 +1,5 @@
 $(window).on("load", function() {
-    $("#world-select-modal").modal("show");
+    $("#universe-select-modal").modal("show");
     $("#body-wrapper").addClass("d-none");
 });
 
@@ -10,7 +10,8 @@ $(document).ready(function() {
         $("#dc-game").removeClass("d-none");
         $("#marvel-game").addClass("d-none");
         $("#body-wrapper").removeClass("d-none");
-        $(".container-fluid").addClass("dc-background");
+        $(".container-fluid").removeClass("marvel-background")
+            .addClass("dc-background");
     });
 
     $("#marvel-modal-image").click(function() {
@@ -18,7 +19,8 @@ $(document).ready(function() {
         $("#dc-game").addClass("d-none");
         $("#marvel-game").removeClass("d-none");
         $("#body-wrapper").removeClass("d-none");
-        $(".container-fluid").addClass("marvel-background")
+        $(".container-fluid").removeClass("dc-background")
+            .addClass("marvel-background")
     });
 
     $(".hero-card").click(function() {
@@ -30,7 +32,11 @@ $(document).ready(function() {
         $(this).hide("hero-card-back").show("hero-card-front");
     });
 
+    $(".link-info-container").click(function() {
+        $("#myModal").modal("show");
+    })
 });
+
 
 
 
