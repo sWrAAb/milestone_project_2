@@ -147,6 +147,14 @@
      transform: rotateY(180deg);
  }
  /*----/Flip CSS----*/
+ 
+ .hero-card-container:hover {
+     cursor: grab;
+ }
+ 
+ .hero-card:hover {
+     cursor: grabbing;
+ }
  /*-----Starting Page-----*/
  
  #starting-page {
@@ -211,7 +219,7 @@
          transform: scale(1);
      }
      .images {
-         height: 200px;
+         height: 100%;
          width: 100%;
      }
  }

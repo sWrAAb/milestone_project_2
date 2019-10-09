@@ -6,6 +6,11 @@
 <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank"><img src="assets/images/marvel_vs_dc_logo.jpg" alt="Matching card game for superhero fans" ></a>
 
 
+Game consist of 3 pages. Only one page can be seen at any time.
+
+:D
+
+
 
 
 
