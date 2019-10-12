@@ -59,15 +59,17 @@
  
  .link-info-container {
      color: rgb(165, 3, 3);
-     float: left;
-     display: inline;
+     display: flex;
  }
  
  .link-text {
      display: inline;
      font-family: 'Bangers', cursive;
      color: rgb(165, 3, 3);
-     float: left;
+ }
+ 
+ .link-text:hover {
+     cursor: pointer;
  }
  /*-----Starting Page-----*/
  
@@ -81,6 +83,7 @@
  #game-logo {
      padding-top: 30vh;
      width: 100vw;
+     align-content: center;
  }
  /*-----/Starting Page-----*/
  /*-----Cards-----*/
@@ -91,7 +94,6 @@
  }
  
  .hero-card {
-     cursor: pointer;
      height: 100px;
      width: 100px;
      border: 2px solid grey;
@@ -109,7 +111,7 @@
  
  .images {
      height: 100px;
-     width: 100%;
+     width: 100px;
      background-color: aliceblue;
  }
  /*-----/Cards-----*/
@@ -162,8 +164,6 @@
      background: black;
      text-align: center;
  }
- 
- #game-logo {}
  /*-----/Starting Page-----*/
  /*-----Background Image-----*/
  
@@ -219,7 +219,7 @@
          transform: scale(1);
      }
      .images {
-         height: 100%;
+         height: 200px;
          width: 100%;
      }
  }

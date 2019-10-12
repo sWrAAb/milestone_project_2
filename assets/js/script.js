@@ -1,10 +1,8 @@
-$(window).on("load", function() {
+$(document).ready(function() {
+
     $("#universe-select-modal").modal("show");
     $("#body-wrapper").addClass("d-none");
-});
 
-
-$(document).ready(function() {
     $("#dc-modal-image").click(function() {
         $("#starting-page").addClass("d-none");
         $("#dc-game").removeClass("d-none");
