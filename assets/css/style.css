@@ -5,9 +5,6 @@
  }
  
  #content-wrapper {
-     display: -webkit-box;
-     display: -webkit-flex;
-     display: -ms-flexbox;
      display: flex;
      min-height: 100vh;
      flex-direction: column;
