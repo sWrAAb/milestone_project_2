@@ -57,7 +57,7 @@
      overflow-x: hidden;
  }
  
- .link-info-container {
+ #link-info-container {
      color: rgb(165, 3, 3);
      display: flex;
  }
