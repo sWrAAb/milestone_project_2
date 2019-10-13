@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    ready()
+
+
     $("#universe-select-modal").modal("show");
     $("#body-wrapper").addClass("d-none");
 
@@ -24,7 +27,6 @@ $(document).ready(function() {
 
     $(".hero-card").click(function() {
         $(this).flip();
-        console.log(this);
     })
 
 
@@ -32,7 +34,19 @@ $(document).ready(function() {
     $(".link-info-container").click(function() {
         $("#myModal").modal("show");
     })
+
+
 });
+
+function ready() {
+    let cards = Array.from(document.getElementsByClassName("hero-card"))
+}
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+
+    })
+})
+
 
 
 
