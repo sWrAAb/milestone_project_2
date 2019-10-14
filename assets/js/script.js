@@ -35,16 +35,29 @@ $(document).ready(function() {
         $("#myModal").modal("show");
     })
 
-    const cards = document.querySelectorAll(".hero-card");
 
-    function flipCard() {
-        console.log(this);
-    }
-
-    cards.forEach(card => card.addEventListener("click", flipCard))
 });
 
+const cards = document.querySelectorAll(".hero-card");
 
+let flippedCard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+    this.classList.add("flipper");
+
+    if (!flippedCard) {
+        flippedCard = true;
+        firstCard = this;
+    } else {
+        flippedCard = true;
+        firstCard = this;
+
+
+    }
+}
+
+cards.forEach(card => card.addEventListener("click", flipCard))
 
 
 
