@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    ready()
+
 
 
     $("#universe-select-modal").modal("show");
@@ -35,17 +35,16 @@ $(document).ready(function() {
         $("#myModal").modal("show");
     })
 
+    const cards = document.querySelectorAll(".hero-card");
 
+    function flipCard() {
+        console.log(this);
+    }
+
+    cards.forEach(card => card.addEventListener("click", flipCard))
 });
 
-function ready() {
-    let cards = Array.from(document.getElementsByClassName("hero-card"))
-}
-cards.forEach(card => {
-    card.addEventListener("click", () => {
 
-    })
-})
 
 
 
