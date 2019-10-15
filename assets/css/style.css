@@ -96,7 +96,6 @@
      border: 2px solid grey;
      border-radius: 10px;
      overflow: hidden;
-     perspective: 1000px;
      margin: 0;
      padding: 0;
      transform-style: preserve-3d;
