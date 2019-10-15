@@ -17,3 +17,6 @@ Game consist of 3 pages. Only one page can be seen at any time.
 velocity animation https://dzone.com
 
 flip card animation: https://www.w3schools.com
+
+styles from: https://css-tricks.com
+

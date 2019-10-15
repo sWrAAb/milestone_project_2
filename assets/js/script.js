@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-
-
-
     $("#universe-select-modal").modal("show");
     $("#body-wrapper").addClass("d-none");
 
@@ -22,7 +19,6 @@ $(document).ready(function() {
         $("#body-wrapper").removeClass("d-none");
         $(".container-fluid").removeClass("dc-background")
             .addClass("marvel-background");
-        $(".front").hidden;
     });
 
     $(".hero-card").click(function() {
@@ -35,6 +31,12 @@ $(document).ready(function() {
         $("#myModal").modal("show");
     })
 
+    $(".hero-card").mousedown(function() {
+        $(this).css("cursor", "grabbing;");
+    });
+    $('#sideBar ul li .template').mouseup(function() {
+        $(this).css("cursor", "grab");
+    });
 
 });
 
@@ -44,14 +46,29 @@ let flippedCard = false;
 let firstCard, secondCard;
 
 function flipCard() {
-    this.classList.add("flipper");
+    this.classList.add("flip");
 
     if (!flippedCard) {
         flippedCard = true;
         firstCard = this;
     } else {
-        flippedCard = true;
-        firstCard = this;
+        flippedCard = false;
+        secondCard = this;
+
+        if (firstCard.dataset.name === secondCard.dataset.name) {
+            firstCard.removeEventListener("click", flipCard);
+            secondCard.removeEventListener("click", flipCard);
+        } else {
+            setTimeout(() => {
+                firstCard.classList.remove("flip");
+                secondCard.classList.remove("flip");
+
+            }, 1500);
+        }
+
+
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
 
 
     }
