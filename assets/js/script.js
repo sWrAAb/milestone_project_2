@@ -1,39 +1,87 @@
-$(document).ready(function() {
+$("#universe-select-modal").modal("show");
+$("#body-wrapper").addClass("d-none");
 
-    $("#universe-select-modal").modal("show");
-    $("#body-wrapper").addClass("d-none");
-
-    $("#dc-modal-image").click(function() {
-        $("#starting-page").addClass("d-none");
-        $("#dc-game").removeClass("d-none");
-        $("#marvel-game").addClass("d-none");
-        $("#body-wrapper").removeClass("d-none");
-        $(".container-fluid").removeClass("marvel-background")
-            .addClass("dc-background");
-    });
-
-    $("#marvel-modal-image").click(function() {
-        $("#starting-page").addClass("d-none");
-        $("#dc-game").addClass("d-none");
-        $("#marvel-game").removeClass("d-none");
-        $("#body-wrapper").removeClass("d-none");
-        $(".container-fluid").removeClass("dc-background")
-            .addClass("marvel-background");
-    });
-
-
-
-
-    $(".link-info-container").click(function() {
-        $("#myModal").modal("show");
-    })
-
+$("#dc-modal-image").click(function() {
+    $("#starting-page").addClass("d-none");
+    $("#dc-game").removeClass("d-none");
+    $("#marvel-game").addClass("d-none");
+    $("#body-wrapper").removeClass("d-none");
+    $(".container-fluid").removeClass("marvel-background")
+        .addClass("dc-background");
 });
 
-var heroCard = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
+$("#marvel-modal-image").click(function() {
+    $("#starting-page").addClass("d-none");
+    $("#dc-game").addClass("d-none");
+    $("#marvel-game").removeClass("d-none");
+    $("#body-wrapper").removeClass("d-none");
+    $(".container-fluid").removeClass("dc-background")
+        .addClass("marvel-background");
+});
+
+
+
+
+$(".link-info-container").click(function() {
+    $("#myModal").modal("show");
+})
+
+
+const cards = document.querySelectorAll(".hero-card");
+
+let hasFlippedCard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+    this.classList.toggle("flip");
+
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+    } else {
+        hasFlippedCard = false;
+        secondCard = this;
+
+        console.log(firstCard.dataset.name);
+        console.log(secondCard.dataset.name);
+    }
+}
+
+
+cards.forEach(card => card.addEventListener("click", flipCard))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+var heroCardArray = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
 var heroCard_values = [];
-var heroCard_tiles_ids = [];
+var heroCard_ids = [];
 var heroCard_flipped = 0;
+
+
+
+
+
+
+
+
+
+
+
 
 Array.prototype.heroCard_shuffle = function() {
     var i = this.length,
@@ -46,10 +94,60 @@ Array.prototype.heroCard_shuffle = function() {
     }
 }
 
+function newBoard() {
+    tiles_flipped = 0;
+    var output = "";
+    memory_array.heroCard_shuffle();
+    for (var i = 0; i < heroCardArray.length; i++) {
+        output += '<div id="card_' + i + '" onclick="heroCardFlip(this,\'' + memory_array[i] + '\')"></div>';
+    }
+    document.getElementsByClassName("game-container").innerHTML = output;
+}
+
+function heroCardFlip(tile, val) {
+    if (tile.innerHTML == "" && heroCard_values.length < 2) {
+        tile.style.background = '#FFF';
+        tile.innerHTML = val;
+        if (heroCard_values.length == 0) {
+            heroCard_values.push(val);
+            heroCard_ids.push(card.id);
+        } else if (memory_values.length == 1) {
+            heroCard_values.push(val);
+            heroCard_ids.push(tile.id);
+            if (heroCard_values[0] == heroCard_values[1]) {
+                heroCard_flipped += 2;
+                // Clear both arrays
+                heroCard_values = [];
+                heroCard_ids = [];
+                // Check to see if the whole board is cleared
+                if (tiles_flipped == heroCardArray.length) {
+                    alert("Board cleared... generating new board");
+                    document.getElementsByClassName("game-container").innerHTML = "";
+                    newBoard();
+                }
+            } else {
+                function flip2Back() {
+                    // Flip the 2 tiles back over
+                    var tile_1 = document.getElementById(heroCard_ids[0]);
+                    var tile_2 = document.getElementById(heroCard_ids[1]);
+                    tile_1.style.background = 'url(tile_bg.jpg) no-repeat';
+                    tile_1.innerHTML = "";
+                    tile_2.style.background = 'url(tile_bg.jpg) no-repeat';
+                    tile_2.innerHTML = "";
+                    // Clear both arrays
+                    memory_values = [];
+                    memory_tile_ids = [];
+                }
+                setTimeout(flip2Back, 700);
+            }
+        }
+    }
+}
 
 
 
-/*
+
+
 
 function deckAnimation() {
 
