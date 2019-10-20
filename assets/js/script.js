@@ -21,9 +21,6 @@ $(document).ready(function() {
             .addClass("marvel-background");
     });
 
-    $(".hero-card").click(function() {
-        $(this).flip();
-    })
 
 
 
@@ -31,51 +28,23 @@ $(document).ready(function() {
         $("#myModal").modal("show");
     })
 
-    $(".hero-card").mousedown(function() {
-        $(this).css("cursor", "grabbing;");
-    });
-    $('#sideBar ul li .template').mouseup(function() {
-        $(this).css("cursor", "grab");
-    });
-
 });
 
-const cards = document.querySelectorAll(".hero-card");
+var heroCard = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
+var heroCard_values = [];
+var heroCard_tiles_ids = [];
+var heroCard_flipped = 0;
 
-let flippedCard = false;
-let firstCard, secondCard;
-
-function flipCard() {
-    this.classList.add("flip");
-
-    if (!flippedCard) {
-        flippedCard = true;
-        firstCard = this;
-    } else {
-        flippedCard = false;
-        secondCard = this;
-
-        if (firstCard.dataset.name === secondCard.dataset.name) {
-            firstCard.removeEventListener("click", flipCard);
-            secondCard.removeEventListener("click", flipCard);
-        } else {
-            setTimeout(() => {
-                firstCard.classList.remove("flip");
-                secondCard.classList.remove("flip");
-
-            }, 1500);
-        }
-
-
-        firstCard.classList.remove("flip");
-        secondCard.classList.remove("flip");
-
-
+Array.prototype.heroCard_shuffle = function() {
+    var i = this.length,
+        j, temp;
+    while (--i > 0) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = this[j];
+        this[j] = this[i];
+        this[i] = temp;
     }
 }
-
-cards.forEach(card => card.addEventListener("click", flipCard))
-
 
 
 

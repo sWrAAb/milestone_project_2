@@ -87,7 +87,6 @@
  
  #hero-card-container {
      display: flex;
-     justify-content: center;
      perspective: 1000px;
  }
  
@@ -98,14 +97,13 @@
      border-radius: 10px;
      overflow: hidden;
      display: flex;
+     position: relative;
      margin: 0;
      padding: 0;
-     transform-style: preserve-3d;
-     transition: transform .5s;
  }
  
  .back-logo {
-     width: 100%;
+     width: 80%;
      justify-content: center;
  }
  
@@ -116,43 +114,16 @@
  }
  /*-----/Cards-----*/
  /*----Flip CSS----*/
- 
- .game-container {
-     perspective: 1000px;
- }
- 
- .flip {
-     transition: 1s;
-     transform-style: preserve-3d;
-     position: relative;
- }
- 
- .front,
- .back {
-     margin: 0;
-     padding: 0;
-     transition: transform .5s;
-     position: absolute;
-     top: 0;
- }
- 
- .front {
-     transform: rotateY(0deg);
-     overflow: hidden;
-     display: flex;
- }
- 
- .back {
-     transform: rotateY(-180deg);
- }
  /*----/Flip CSS----*/
  
  .hero-card-container:hover {
-     cursor: grab;
+     cursor: pointer;
  }
  
- .hero-card:active {
-     cursor: grabbing;
+ .hero-card:hover {
+     cursor: grab;
+     transform: scale(0.97);
+     transition: transform .2s;
  }
  /*-----Starting Page-----*/
  
@@ -160,6 +131,10 @@
      height: 100vh;
      background: black;
      text-align: center;
+ }
+ 
+ #game-logo {
+     width: 80%;
  }
  /*-----/Starting Page-----*/
  /*-----Background Image-----*/
