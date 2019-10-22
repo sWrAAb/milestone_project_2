@@ -47,17 +47,29 @@ function flipCard() {
         hasFlippedCard = false;
         secondCard = this;
     }
+    checkForMatch();
+}
+
+function checkForMatch() {
     if (firstCard.dataset.name === secondCard.dataset.name) {
-        firstCard.removeEventListener("click", flipCard);
-        secondCard.removeEventListener("click", flipCard);
+        disableCards();
     } else {
-        setTimeout(() => {
-            firstCard.classList.remove("flip");
-            secondCard.classList.remove("flip");
-        }, 1500);
-
-
+        unflipCards()
     }
+}
+
+function disableCards() {
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
+}
+
+function unflipCards() {
+    setTimeout(() => {
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+    }, 1500);
+
+
 }
 
 
