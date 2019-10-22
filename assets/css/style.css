@@ -74,21 +74,6 @@
      .link-text:hover {
          cursor: pointer;
      }
-     /*-----Starting Page-----*/
-     
-     #starting-page {
-         height: 100vh;
-         background: black;
-         text-align: center;
-         position: relative;
-     }
-     
-     #game-image {
-         padding-top: 20%;
-         width: 100%;
-         align-content: center;
-     }
-     /*-----/Starting Page-----*/
      /*-----Cards-----*/
      
      .hero-card-container {
@@ -171,12 +156,17 @@
      /*-----Starting Page-----*/
      
      #starting-page {
+         width: 100vw;
          height: 100vh;
          background: black;
          text-align: center;
+         overflow: hidden;
      }
      
-     #game-logo {}
+     #game-logo {
+         width: 100vw;
+         height: 60vh;
+     }
      /*-----/Starting Page-----*/
      /*-----Background Image-----*/
      
@@ -233,6 +223,17 @@
              height: 200px;
              width: 200px;
          }
+         #game-logo {
+             width: 100vw;
+             height: 70vh;
+         }
+         .game-title {
+             font-family: 'Bangers', cursive;
+             padding-top: 20px;
+             color: rgb(243, 243, 243);
+             font-size: 150px;
+             opacity: 1;
+         }
      }
      
      @media screen and (min-width: 992px) {
@@ -248,9 +249,16 @@
              height: 233px;
              width: 233px;
          }
-         #game-image {
+         #game-logo {
+             width: 80vw;
+             height: 70vh;
+         }
+         .game-title {
+             font-family: 'Bangers', cursive;
              padding-top: 50px;
-             width: 60vw;
+             color: rgb(243, 243, 243);
+             font-size: 200px;
+             opacity: 1;
          }
      }
      /*-----/Media Queries-----*/
