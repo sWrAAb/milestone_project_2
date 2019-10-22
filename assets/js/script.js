@@ -35,27 +35,27 @@ $(".link-info-container").click(function() {
 const cards = document.querySelectorAll(".hero-card");
 
 let hasFlippedCard = false;
+let lockBoard = false;
 let firstCard, secondCard;
 
 function flipCard() {
+    if (lockBoard) return;
     this.classList.add("flip");
 
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
-    } else {
-        hasFlippedCard = false;
-        secondCard = this;
+        return;
     }
+    hasFlippedCard = false;
+    secondCard = this;
+
     checkForMatch();
 }
 
 function checkForMatch() {
-    if (firstCard.dataset.name === secondCard.dataset.name) {
-        disableCards();
-    } else {
-        unflipCards()
-    }
+    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+    isMatch ? disableCards() : unflipCards();
 }
 
 function disableCards() {
@@ -64,12 +64,12 @@ function disableCards() {
 }
 
 function unflipCards() {
+    lockBoard = true;
     setTimeout(() => {
         firstCard.classList.remove("flip");
         secondCard.classList.remove("flip");
+        lockBoard = false;
     }, 1500);
-
-
 }
 
 
