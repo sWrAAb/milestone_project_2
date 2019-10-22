@@ -21,6 +21,12 @@
      
      .game-info-container {
          margin-bottom: 5px;
+         background: whitesmoke;
+         border: 1px solid black;
+         border-radius: 5px;
+         max-width: 80vw;
+         margin: auto;
+         background: lightgrey;
      }
      
      .deck-container {}
@@ -113,6 +119,7 @@
      }
      
      .hero-card:active {
+         cursor: grabbing;
          -webkit-transform: scale(0.97);
          -ms-transform: scale(0.97);
          transform: scale(0.97);
@@ -145,8 +152,12 @@
          backface-visibility: hidden;
      }
      
+     .front {
+         backface-visibility: hidden;
+     }
+     
      .back {
-         transform: rotateY(180deg);
+         backface-visibility: hidden;
      }
      /*----/Flip CSS----*/
      
