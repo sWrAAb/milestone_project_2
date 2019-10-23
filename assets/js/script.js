@@ -3,7 +3,7 @@
 $("#universe-select-modal").modal("show");
 $("#body-wrapper").addClass("d-none");
 
-/*----Modal has two images. Each one loads different part of page.----*/
+/*----Modal has two images. Each one loads different game board.----*/
 
 $("#dc-modal-image").click(function() {
     $("#starting-page").addClass("d-none");
@@ -24,7 +24,7 @@ $("#marvel-modal-image").click(function() {
         .addClass("marvel-background");
 });
 
-/*----Button for Univers Change. Brings back starting modal----*/
+/*----Button for Universe change. Brings back starting modal----*/
 
 $(".link-info-container").click(function() {
     $("#myModal").modal("show");
