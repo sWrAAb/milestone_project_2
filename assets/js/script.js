@@ -1,12 +1,42 @@
 class AudioController {
     constructor() {
-        this.flipedCard = new Audio("../sounds/select.mp3");
+        this.flipedSound = new Audio("../sounds/select.mp3");
         this.matchSound = new Audio("../sounds/blue-cymb.mp3");
         this.victorySound = new Audio("../sounds/victory.mp3");
         this.defeatSound = new Audio("../sounds/defeat.mp3");
     }
+    flip() {
+        this.flipedSound.play();
+    }
 
+    match() {
+        this.matchSound.play();
+    }
+
+    victory() {
+        this.victorySound.play();
+    }
+    defeat() {
+        this.defeatSound.play();
+    }
 }
+
+class HeroFlipoff {
+    constructor(totalTime, cards) {
+        this.cardsArray = cards;
+        this.totalTime = totalTime;
+        this.timeRemaining = totalTime;
+        this.timer = document.getElementById("time-remaining");
+        this.ticker = document.getElementById("moves");
+        this.audioController = new AudioController;
+    }
+    startGame() {
+        this.cardToCheck = null;
+        this.totalClicks = null;
+        this.timeRemaining = this.totalTime;
+    }
+}
+
 
 /*----Modal starts on page load----*/
 
