@@ -1,3 +1,13 @@
+class AudioController {
+    constructor() {
+        this.flipedCard = new Audio("../sounds/select.mp3");
+        this.matchSound = new Audio("../sounds/blue-cymb.mp3");
+        this.victorySound = new Audio("../sounds/victory.mp3");
+        this.defeatSound = new Audio("../sounds/defeat.mp3");
+    }
+
+}
+
 /*----Modal starts on page load----*/
 
 $("#universe-select-modal").modal("show");
@@ -87,7 +97,13 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
-
+function countMoves() {
+    let movesCounted = ("Turns: " + turnsCounter);
+    if ((flipCounter % 2) == 0) {
+        turnsCounter++;
+    }
+    $('.turns-counter').text(turnsCounted);
+}
 
 /*
 
