@@ -14,7 +14,6 @@ $("#dc-modal-image").click(function() {
         .addClass("dc-background");
 });
 
-
 $("#marvel-modal-image").click(function() {
     $("#starting-page").addClass("d-none");
     $("#dc-game").addClass("d-none");
@@ -101,7 +100,7 @@ function flipCard() {
     flipSound.play();
     checkForMatch();
     this.totalClicks++;
-    this.ticker.innerText = this.totalClicks;
+
 }
 
 function checkForMatch() {
@@ -134,16 +133,22 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-function shuffleCards(cards) {
-    for (let i = this.cards.lenght - 1; i > 0; i--) {
-        let randIndex = Math.floor(Math.random() * (i + 1));
-        this.cards[randIndex].style.order = i;
-        this.cards[i].style.order = randIndex;
+
+$(function shuffleDC() {
+    var parent = $(".dc-deck-container");
+    var divs = parent.children();
+    while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
     }
-}
+});
 
-console.log(cards);
-
+$(function shuffleMarvel() {
+    var parent = $(".marvel-deck-container");
+    var divs = parent.children();
+    while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
+});
 cards.forEach(card => card.addEventListener("click", flipCard));
 
 

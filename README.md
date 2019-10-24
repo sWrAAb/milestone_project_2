@@ -22,3 +22,5 @@ styles from: https://css-tricks.com
 
 sounds from: https://freesound.org
 
+shuffle arraj : https://jsfiddle.net/C6LPY/2/
+
