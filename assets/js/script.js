@@ -1,43 +1,3 @@
-class AudioController {
-    constructor() {
-        this.flipedSound = new Audio("../sounds/select.mp3");
-        this.matchSound = new Audio("../sounds/blue-cymb.mp3");
-        this.victorySound = new Audio("../sounds/victory.mp3");
-        this.defeatSound = new Audio("../sounds/defeat.mp3");
-    }
-    flip() {
-        this.flipedSound.play();
-    }
-
-    match() {
-        this.matchSound.play();
-    }
-
-    victory() {
-        this.victorySound.play();
-    }
-    defeat() {
-        this.defeatSound.play();
-    }
-}
-
-class HeroFlipoff {
-    constructor(totalTime, cards) {
-        this.cardsArray = cards;
-        this.totalTime = totalTime;
-        this.timeRemaining = totalTime;
-        this.timer = document.getElementById("time-remaining");
-        this.ticker = document.getElementById("moves");
-        this.audioController = new AudioController;
-    }
-    startGame() {
-        this.cardToCheck = null;
-        this.totalClicks = null;
-        this.timeRemaining = this.totalTime;
-    }
-}
-
-
 /*----Modal starts on page load----*/
 
 $("#universe-select-modal").modal("show");
@@ -78,6 +38,54 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+var flipSound = document.getElementById("cardFlipAudio");
+var matchSound = document.getElementById("matchAudio");
+
+/*
+
+class AudioController {
+    constructor() {
+        this.flipedSound = new Audio("../sounds/select.mp3");
+        this.matchSound = new Audio("../sounds/blue-cymb.mp3");
+        this.victorySound = new Audio("../sounds/victory.mp3");
+        this.defeatSound = new Audio("../sounds/defeat.mp3");
+    }
+    flip() {
+        this.flipedSound.play();
+    }
+
+    match() {
+        this.matchSound.play();
+    }
+
+    victory() {
+        this.victorySound.play();
+    }
+    defeat() {
+        this.defeatSound.play();
+    }
+}
+*/
+
+class HeroFlipoff {
+    constructor(totalTime, cards) {
+        this.cardsArray = cards;
+        this.totalTime = totalTime;
+        this.timeRemaining = totalTime;
+        this.timer = document.getElementById("time-remaining");
+        this.ticker = document.getElementById("moves");
+        this.audioController = new AudioController;
+    }
+    startGame() {
+        this.cardToCheck = null;
+        this.totalClicks = null;
+        this.timeRemaining = this.totalTime;
+        this.matchedCards = [];
+        /* 20 */
+        shuffleCards();
+    }
+}
+
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -86,15 +94,24 @@ function flipCard() {
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
+        flipSound.play();
         return;
     }
     secondCard = this;
+    flipSound.play();
     checkForMatch();
+    this.totalClicks++;
+    this.ticker.innerText = this.totalClicks;
 }
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
     isMatch ? disableCards() : unflipCards();
+    if (isMatch = true) {
+        this.matchSound.play();
+    } else {
+        return;
+    }
 }
 
 function disableCards() {
@@ -117,23 +134,19 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-(function shuffle() {
-    cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 12);
-        card.style.order = randomPos;
-    });
-})();
+function shuffleCards(cards) {
+    for (let i = this.cards.lenght - 1; i > 0; i--) {
+        let randIndex = Math.floor(Math.random() * (i + 1));
+        this.cards[randIndex].style.order = i;
+        this.cards[i].style.order = randIndex;
+    }
+}
 
+console.log(cards);
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
-function countMoves() {
-    let movesCounted = ("Turns: " + turnsCounter);
-    if ((flipCounter % 2) == 0) {
-        turnsCounter++;
-    }
-    $('.turns-counter').text(turnsCounted);
-}
+
 
 /*
 
