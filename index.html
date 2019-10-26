@@ -33,25 +33,25 @@
 
                 <div class="row">
 
-                    <div class="col-12 game-title justify-content-center">
+                    <div class="col-10 offset-1 col-sm-4 offset-sm-4 title-container">
 
-                        <h1 class="main-title text-center">Match Heroes</h1>
+                        <h1 class="text-center">Match Heroes</h1>
 
-                        <button type="button" class="btn btn-danger" id="link-info-container" data-toggle="modal" data-target="#universe-select-modal">
+                        <button type="button" class="btn restart-game-button" id="link-info-container" data-toggle="modal" data-target="#restart-game-modal">
 
-                               <span class="link-text" data-target="#myModal">Choose Universe</span>
+                               <span class="link-text" data-target="#myModal">Restart Game</span>
                         
                         </button>
 
-                    </div>
+                        <div class="col-12 game-info-container">
 
-                    <div class="col-12 game-info-container">
+                            <div class="col-6 game-info text-center">
+                                Time <span id="time-remaining">60</span>
+                            </div>
+                            <div class="col-6 game-info text-center">
+                                Moves <span id="moves">0</span>
+                            </div>
 
-                        <div class="col-6 game-info text-center">
-                            Time <span id="time-remaining">60</span>
-                        </div>
-                        <div class="col-6 game-info text-center">
-                            Moves <span id="moves">0</span>
                         </div>
 
                     </div>
@@ -563,7 +563,7 @@
 
     <!--Modals-->
 
-    <div class="modal" id="universe-select-modal" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal" id="restart-game-modal" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header mx-auto">

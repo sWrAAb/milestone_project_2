@@ -1,6 +1,6 @@
 /*----Modal starts on page load----*/
 
-$("#universe-select-modal").modal("show");
+$("#restart-game-modal").modal("show");
 $("#body-wrapper").addClass("d-none");
 
 /*----Modal has two images. Each one loads different game board.----*/
@@ -23,7 +23,7 @@ $("#marvel-modal-image").click(function() {
         .addClass("marvel-background");
 });
 
-/*----Button for Universe change. Brings back starting modal----*/
+/*----Restart game button. Brings back starting modal----*/
 
 $(".link-info-container").click(function() {
     $("#myModal").modal("show");
@@ -40,31 +40,7 @@ let firstCard, secondCard;
 var flipSound = document.getElementById("cardFlipAudio");
 var matchSound = document.getElementById("matchAudio");
 
-/*
-
-class AudioController {
-    constructor() {
-        this.flipedSound = new Audio("../sounds/select.mp3");
-        this.matchSound = new Audio("../sounds/blue-cymb.mp3");
-        this.victorySound = new Audio("../sounds/victory.mp3");
-        this.defeatSound = new Audio("../sounds/defeat.mp3");
-    }
-    flip() {
-        this.flipedSound.play();
-    }
-
-    match() {
-        this.matchSound.play();
-    }
-
-    victory() {
-        this.victorySound.play();
-    }
-    defeat() {
-        this.defeatSound.play();
-    }
-}
-*/
+var displayMoves = document.getElementById("moves");
 
 class HeroFlipoff {
     constructor(totalTime, cards) {
@@ -73,7 +49,6 @@ class HeroFlipoff {
         this.timeRemaining = totalTime;
         this.timer = document.getElementById("time-remaining");
         this.ticker = document.getElementById("moves");
-        this.audioController = new AudioController;
     }
     startGame() {
         this.cardToCheck = null;
@@ -81,7 +56,6 @@ class HeroFlipoff {
         this.timeRemaining = this.totalTime;
         this.matchedCards = [];
         /* 20 */
-        shuffleCards();
     }
 }
 
@@ -93,24 +67,21 @@ function flipCard() {
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
+
         flipSound.play();
         return;
     }
     secondCard = this;
     flipSound.play();
+
     checkForMatch();
-    this.totalClicks++;
 
 }
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
     isMatch ? disableCards() : unflipCards();
-    if (isMatch = true) {
-        this.matchSound.play();
-    } else {
-        return;
-    }
+
 }
 
 function disableCards() {
