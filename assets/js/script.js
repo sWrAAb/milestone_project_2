@@ -4,7 +4,6 @@ let lockBoard = false;
 let firstCard, secondCard;
 let numberOfMoves = 0;
 let match = 0;
-let timer = document.getElementById("time-remaining")
 let moves = document.getElementById("moves");
 
 function flipCard() {
@@ -21,6 +20,11 @@ function flipCard() {
 
 }
 
+var count = 10,
+    timer = setInterval(function() {
+        $("#time-remaining").html(count--);
+        if (count === -1) clearInterval(timer);
+    }, 1000);
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -32,7 +36,6 @@ function checkForMatch() {
     } else {
         unflipCards()
     }
-    console.log(numberOfMoves);
     setTimeout(() => {
         if (match === 6) {
             alert("You've won, well done, you used " + numberOfMoves + " moves.")
