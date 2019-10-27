@@ -1,3 +1,28 @@
+$("#restart-game-modal").modal("show");
+$("#body-wrapper").addClass("d-none");
+
+$("#dc-modal-image").click(function() {
+    $("#starting-page").addClass("d-none");
+    $("#dc-game").removeClass("d-none");
+    $("#marvel-game").addClass("d-none");
+    $("#body-wrapper").removeClass("d-none");
+    $(".container-fluid").removeClass("marvel-background")
+        .addClass("dc-background");
+    timer();
+});
+
+$("#marvel-modal-image").click(function() {
+    $("#starting-page").addClass("d-none");
+    $("#dc-game").addClass("d-none");
+    $("#marvel-game").removeClass("d-none");
+    $("#body-wrapper").removeClass("d-none");
+    $(".container-fluid").removeClass("dc-background")
+        .addClass("marvel-background");
+    timer();
+});
+
+
+
 const cards = document.querySelectorAll(".hero-card");
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -6,7 +31,9 @@ let numberOfMoves = 0;
 let match = 0;
 let moves = document.getElementById("moves");
 
+
 function flipCard() {
+
     if (lockBoard) return;
     if (this === firstCard) return;
     this.classList.add('flip');
@@ -17,14 +44,24 @@ function flipCard() {
     }
     secondCard = this;
     checkForMatch();
-
 }
 
-var count = 10,
-    timer = setInterval(function() {
-        $("#time-remaining").html(count--);
-        if (count === -1) clearInterval(timer);
-    }, 1000);
+function timer() {
+    var count = 10,
+        timer = setInterval(function() {
+            $("#time-remaining").html(count--);
+            if (count === -1) {
+                clearInterval(timer);
+                setTimeout(() => {
+                    alert("Out of time");
+                }, 1000);
+            }
+        }, 1000);
+
+
+
+
+}
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;

@@ -15,95 +15,181 @@
 
 </head>
 
-<body class="dc-background">
+<body>
 
-    <div class="container-fluid p-0">
+    <div id="starting-page" class="m-0 p-0">
 
-        <div class="row">
-
-            <div class="col-12 col-sm-4 col-md-3 title-container">
-
-                <h1 class="game-title text-center">Match Heroes</h1>
-
-                <div class="col-12 game-info-container">
-
-                    <div class="col-6 game-info text-center">
-                        Time <span id="time-remaining">60</span>
-                    </div>
-                    <div class="col-6 game-info text-center">
-                        Moves <span id="moves">0</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div id="dc-game">
-            <div class="col-12 hero-game">
-                <div class="hero-card" data-framework="batman">
-                    <img class="front-face" src="assets/images/heroes_dc/batman.png" alt="Batman">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-                <div class="hero-card" data-framework="batman">
-                    <img class="front-face" src="assets/images/heroes_dc/batman.png" alt="Batman">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-
-                <div class="hero-card" data-framework="lantern">
-                    <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-                <div class="hero-card" data-framework="lantern">
-                    <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-
-                <div class="hero-card" data-framework="flash">
-                    <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-                <div class="hero-card" data-framework="flash">
-                    <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-
-                <div class="hero-card" data-framework="martian">
-                    <img class="front-face" src="assets/images/heroes_dc/martian.jpg" alt="Martian Manhunter">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg " alt="DC-Logo">
-                </div>
-                <div class="hero-card" data-framework="martian">
-                    <img class="front-face" src="assets/images/heroes_dc/martian.jpg" alt="Martian Manhunter">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-
-                <div class="hero-card" data-framework="superman">
-                    <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-                <div class="hero-card" data-framework="superman">
-                    <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-
-                <div class="hero-card" data-framework="wonderwoman">
-                    <img class="front-face" src="assets/images/heroes_dc/wonderwoman.jfif" alt="Wonderwoman">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-                <div class="hero-card" data-framework="wonderwoman">
-                    <img class="front-face" src="assets/images/heroes_dc/wonderwoman.jfif" alt="Wonderwoman">
-                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-                </div>
-            </div>
-
-        </div>
-
+        <img id="game-logo" class="img-fluid m-auto d-block" src="assets/images/marvels_vs_dc_logo.jpg" alt="Game Logo">
+        <h1 class="game-title">Hero Flipoff</h1>
     </div>
 
+    <main id="body-wrapper" class="d-none">
+
+        <div class="container-fluid p-0">
+
+            <div class="row">
+
+                <div class="col-12 col-sm-4 col-md-3 title-container">
+
+                    <h1 class="game-title text-center">Match Heroes</h1>
+
+                    <div class="col-12 game-info-container">
+
+                        <div class="col-6 game-info text-center">
+                            Time <span id="time-remaining">60</span>
+                        </div>
+                        <div class="col-6 game-info text-center">
+                            Moves <span id="moves">0</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="dc-game" class="d-none">
+                <div class="col-12 hero-game">
+                    <div class="hero-card" data-framework="batman">
+                        <img class="front-face" src="assets/images/heroes_dc/batman.png" alt="Batman">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="batman">
+                        <img class="front-face" src="assets/images/heroes_dc/batman.png" alt="Batman">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="lantern">
+                        <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="lantern">
+                        <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="flash">
+                        <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="flash">
+                        <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="martian">
+                        <img class="front-face" src="assets/images/heroes_dc/martian.jpg" alt="Martian Manhunter">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="martian">
+                        <img class="front-face" src="assets/images/heroes_dc/martian.jpg" alt="Martian Manhunter">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="superman">
+                        <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="superman">
+                        <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="wonderwoman">
+                        <img class="front-face" src="assets/images/heroes_dc/wonderwoman.jfif" alt="Wonderwoman">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="wonderwoman">
+                        <img class="front-face" src="assets/images/heroes_dc/wonderwoman.jfif" alt="Wonderwoman">
+                        <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="marvel-game" class="d-none">
+                <div class="col-12 hero-game">
+                    <div class="hero-card" data-framework="captain_america">
+                        <img class="front-face" src="assets/images/heroes_marvel/captain_america.jfif" alt="Captain America">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="captain_america">
+                        <img class="front-face" src="assets/images/heroes_marvel/captain_america.jfif" alt="Captain America">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="hulk">
+                        <img class="front-face" src="assets/images/heroes_marvel/hulk.jfif" alt="Hulk">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="hulk">
+                        <img class="front-face" src="assets/images/heroes_marvel/hulk.jfif" alt="Hulk">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="iron_man">
+                        <img class="front-face" src="assets/images/heroes_marvel/iron_man.jfif" alt="Iron Man">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="iron_man">
+                        <img class="front-face" src="assets/images/heroes_marvel/iron_man.jfif" alt="Iron Man">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="spiderman">
+                        <img class="front-face" src="assets/images/heroes_marvel/spiderman.jfif" alt="Spiderman">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="spiderman">
+                        <img class="front-face" src="assets/images/heroes_marvel/spiderman.jfif" alt="Spiderman">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="thor">
+                        <img class="front-face" src="assets/images/heroes_marvel/thor.jpg" alt="Thor">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="thor">
+                        <img class="front-face" src="assets/images/heroes_marvel/thor.jpg" alt="Thor">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+
+                    <div class="hero-card" data-framework="wolverine">
+                        <img class="front-face" src="assets/images/heroes_marvel/wolverine.png" alt="Wolverine">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+                    <div class="hero-card" data-framework="wolverine">
+                        <img class="front-face" src="assets/images/heroes_marvel/wolverine.png" alt="Wolverine">
+                        <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
+                    </div>
+                </div>
+
+            </div>
 
 
 
+        </div>
+
+    </main>
+
+    <div class="modal" id="restart-game-modal" data-keyboard="false" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header mx-auto">
+                    <h5 class="modal-title">Choose Universe</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 modal-select">
+                            <img id="dc-modal-image" class="modal-image" data-dismiss="modal" src="assets/images/dc/dc_logo.jpg" alt="DC">
+                            <img id="marvel-modal-image" class="modal-image" data-dismiss="modal" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -111,285 +197,37 @@
 
     <!--
 
-    <div id="starting-page " class="m-0 p-0 ">
+    <div id="starting-page" class="m-0 p-0">
 
-        <img id="game-logo " class="img-fluid m-auto d-block " src="assets/images/marvels_vs_dc_logo.jpg " alt="Game Logo ">
-        <h1 class="game-title ">Hero Flipoff</h1>
+        <img id="game-logo" class="img-fluid m-auto d-block" src="assets/images/marvels_vs_dc_logo.jpg" alt="Game Logo">
+        <h1 class="game-title">Hero Flipoff</h1>
     </div>
 
-   <div id="content-wraper ">
+   <div id="content-wraper">
 
-        <main id="body-wrapper ">
+        <main id="body-wrapper">
 
-            <div class="container-fluid p-0 ">
+            <div class="container-fluid p-0">
 
-                <div class="row ">
+                <div class="row">
 
-                    <div class="col-10 offset-1 col-sm-4 offset-sm-4 title-container ">
+                    <div class="col-10 offset-1 col-sm-4 offset-sm-4 title-container">
 
-                        <h1 class="main-title text-center ">Match Heroes</h1>
+                        <h1 class="main-title text-center">Match Heroes</h1>
 
-                        <button type="button " class="btn restart-game-button " id="link-info-container " data-toggle="modal " data-target="#restart-game-modal ">
+                        <button type="button" class="btn restart-game-button" id="link-info-container" data-toggle="modal" data-target="#restart-game-modal">
 
-                               <span class="link-text " data-target="#myModal ">Restart Game</span>
+                               <span class="link-text" data-target="#myModal">Restart Game</span>
                         
                         </button>
 
-                        <div class="col-12 game-info-container ">
+                        <div class="col-12 game-info-container">
 
-                            <div class="col-6 game-info text-center ">
-                                Time <span id="time-remaining ">60</span>
+                            <div class="col-6 game-info text-center">
+                                Time <span id="time-remaining">60</span>
                             </div>
-                            <div class="col-6 game-info text-center ">
-                                Moves <span id="moves ">0</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div id="dc-game " class="game-container d-none ">
-
-                    <div class="row dc-deck-container justify-content-center ">
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="batman ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/batman.png " class="images " alt="Batman ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="batman ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/batman.png " class="images " alt="Batman ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="flash ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/flash.jfif " class="images " alt="Flash ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="flash ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/flash.jfif " class="images " alt="Flash ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="lantern ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/lantern.jfif " class="images " alt="Green Lantern ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="lantern ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/lantern.jfif " class="images " alt="Green Lantern ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="martian ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/martian.jpg " class="images " alt="Martian Manhunter ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="martian ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/martian.jpg " class="images " alt="Martian Manhunter ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="superman ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/Superman.png " class="images " alt="Superman ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class=" col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="superman ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/Superman.png " class="images " alt="Superman ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="wonderwoman ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/wonderwoman.jfif " class="images " alt="Wonder Woman ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="wonderwoman ">
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_dc/wonderwoman.jfif " class="images " alt="Wonder Woman ">
-
-                                </div>
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/dc/dc_logo.jpg " alt="DC Logo ">
-
-                                </div>
-
+                            <div class="col-6 game-info text-center">
+                                Moves <span id="moves">0</span>
                             </div>
 
                         </div>
@@ -398,43 +236,23 @@
 
                 </div>
 
-                <div id="marvel-game " class="game-container d-none ">
+                <div id="dc-game" class="game-container d-none">
 
-                    <div class="row marvel-deck-container justify-content-center ">
+                    <div class="row dc-deck-container justify-content-center">
 
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
 
-                            <div class="hero-card justify-content-center mx-auto " data-name="captain_america ">
+                            <div class="hero-card justify-content-center mx-auto" data-name="batman">
 
-                                <div class="back ">
+                                <div class="front">
 
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/captain_america.jfif " class="images " alt="Captain America ">
+                                    <img src="assets/images/heroes_dc/batman.png" class="images" alt="Batman">
 
                                 </div>
 
-                            </div>
+                                <div class="back">
 
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="captain_america ">
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/captain_america.jfif " class="images " alt="Captain America ">
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
 
                                 </div>
 
@@ -442,39 +260,19 @@
 
                         </div>
 
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
 
-                            <div class="hero-card justify-content-center mx-auto " data-name="hulk ">
+                            <div class="hero-card justify-content-center mx-auto" data-name="batman">
 
-                                <div class="back ">
+                                <div class="front">
 
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/hulk.jfif " class="images " alt="Hulk ">
+                                    <img src="assets/images/heroes_dc/batman.png" class="images" alt="Batman">
 
                                 </div>
 
-                            </div>
+                                <div class="back">
 
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="hulk ">
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/hulk.jfif " class="images " alt="Hulk ">
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
 
                                 </div>
 
@@ -482,39 +280,19 @@
 
                         </div>
 
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
 
-                            <div class="hero-card justify-content-center mx-auto " data-name="iron_man ">
+                            <div class="hero-card justify-content-center mx-auto" data-name="flash">
 
-                                <div class="back ">
+                                <div class="front">
 
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/iron_man.jfif " class="images " alt="Iron Man ">
+                                    <img src="assets/images/heroes_dc/flash.jfif" class="images" alt="Flash">
 
                                 </div>
 
-                            </div>
+                                <div class="back">
 
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="iron_man ">
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/iron_man.jfif " class="images " alt="Iron Man ">
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
 
                                 </div>
 
@@ -522,39 +300,19 @@
 
                         </div>
 
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
 
-                            <div class="hero-card justify-content-center mx-auto " data-name="spiderman ">
+                            <div class="hero-card justify-content-center mx-auto" data-name="flash">
 
-                                <div class="back ">
+                                <div class="front">
 
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/spiderman.jfif " class="images " alt="Spiderman ">
+                                    <img src="assets/images/heroes_dc/flash.jfif" class="images" alt="Flash">
 
                                 </div>
 
-                            </div>
+                                <div class="back">
 
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="spiderman ">
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/spiderman.jfif " class="images " alt="Spiderman ">
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
 
                                 </div>
 
@@ -562,39 +320,19 @@
 
                         </div>
 
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
 
-                            <div class="hero-card justify-content-center mx-auto " data-name="thor ">
+                            <div class="hero-card justify-content-center mx-auto" data-name="lantern">
 
-                                <div class="back ">
+                                <div class="front">
 
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/thor.jpg " class="images " alt="Thor ">
+                                    <img src="assets/images/heroes_dc/lantern.jfif" class="images" alt="Green Lantern">
 
                                 </div>
 
-                            </div>
+                                <div class="back">
 
-                        </div>
-
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
-
-                            <div class="hero-card justify-content-center mx-auto " data-name="thor ">
-
-                                <div class="back ">
-
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
-
-                                </div>
-
-                                <div class="front ">
-
-                                    <img src="assets/images/heroes_marvel/thor.jpg " class="images " alt="Thor ">
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
 
                                 </div>
 
@@ -602,19 +340,19 @@
 
                         </div>
 
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
 
-                            <div class="hero-card justify-content-center mx-auto " data-name="wolverine ">
+                            <div class="hero-card justify-content-center mx-auto" data-name="lantern">
 
-                                <div class="back ">
+                                <div class="front">
 
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
+                                    <img src="assets/images/heroes_dc/lantern.jfif" class="images" alt="Green Lantern">
 
                                 </div>
 
-                                <div class="front ">
+                                <div class="back">
 
-                                    <img src="assets/images/heroes_marvel/wolverine.png " class="images " alt="Wolverine ">
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
 
                                 </div>
 
@@ -622,19 +360,367 @@
 
                         </div>
 
-                        <div class="col-4 col-sm-3 hero-card-container my-2 ">
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
 
-                            <div class="hero-card justify-content-center mx-auto " data-name="wolverine ">
+                            <div class="hero-card justify-content-center mx-auto" data-name="martian">
 
-                                <div class="back ">
+                                <div class="front">
 
-                                    <img class="back-logo " src="assets/images/marvel/marvel_logo.jpeg " alt="DC Logo ">
+                                    <img src="assets/images/heroes_dc/martian.jpg" class="images" alt="Martian Manhunter">
 
                                 </div>
 
-                                <div class="front ">
+                                <div class="back">
 
-                                    <img src="assets/images/heroes_marvel/wolverine.png " class="images " alt="Wolverine ">
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="martian">
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_dc/martian.jpg" class="images" alt="Martian Manhunter">
+
+                                </div>
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="superman">
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_dc/Superman.png" class="images" alt="Superman">
+
+                                </div>
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class=" col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="superman">
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_dc/Superman.png" class="images" alt="Superman">
+
+                                </div>
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="wonderwoman">
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_dc/wonderwoman.jfif" class="images" alt="Wonder Woman">
+
+                                </div>
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="wonderwoman">
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_dc/wonderwoman.jfif" class="images" alt="Wonder Woman">
+
+                                </div>
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/dc/dc_logo.jpg" alt="DC Logo">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="marvel-game" class="game-container d-none">
+
+                    <div class="row marvel-deck-container justify-content-center">
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="captain_america">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/captain_america.jfif" class="images" alt="Captain America">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="captain_america">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/captain_america.jfif" class="images" alt="Captain America">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="hulk">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/hulk.jfif" class="images" alt="Hulk">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="hulk">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/hulk.jfif" class="images" alt="Hulk">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="iron_man">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/iron_man.jfif" class="images" alt="Iron Man">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="iron_man">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/iron_man.jfif" class="images" alt="Iron Man">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="spiderman">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/spiderman.jfif" class="images" alt="Spiderman">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="spiderman">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/spiderman.jfif" class="images" alt="Spiderman">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="thor">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/thor.jpg" class="images" alt="Thor">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="thor">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/thor.jpg" class="images" alt="Thor">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="wolverine">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/wolverine.png" class="images" alt="Wolverine">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-4 col-sm-3 hero-card-container my-2">
+
+                            <div class="hero-card justify-content-center mx-auto" data-name="wolverine">
+
+                                <div class="back">
+
+                                    <img class="back-logo" src="assets/images/marvel/marvel_logo.jpeg" alt="DC Logo">
+
+                                </div>
+
+                                <div class="front">
+
+                                    <img src="assets/images/heroes_marvel/wolverine.png" class="images" alt="Wolverine">
 
                                 </div>
                             </div>
@@ -655,17 +741,17 @@
 
     <!---Modals-
 assets
-        <div class="modal " id="restart-game-modal " data-keyboard="false " tabindex="-1 " role="dialog ">
-            <div class="modal-dialog " role="document ">
-                <div class="modal-content ">
-                    <div class="modal-header mx-auto ">
-                        <h5 class="modal-title ">Choose Universe</h5>
+        <div class="modal" id="restart-game-modal" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header mx-auto">
+                        <h5 class="modal-title">Choose Universe</h5>
                     </div>
-                    <div class="modal-body ">
-                        <div class="row ">
-                            <div class="col-12 modal-select ">
-                                <img id="dc-modal-image " class="modal-image " data-dismiss="modal " src="assets/images/dc/dc_logo.jpg " alt="DC ">
-                                <img id="marvel-modal-image " class="modal-image " data-dismiss="modal " src="assets/images/marvel/marvel_logo.jpeg " alt="Marvel ">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 modal-select">
+                                <img id="dc-modal-image" class="modal-image" data-dismiss="modal" src="assets/images/dc/dc_logo.jpg" alt="DC">
+                                <img id="marvel-modal-image" class="modal-image" data-dismiss="modal" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel">
 
                             </div>
                         </div>
@@ -678,23 +764,23 @@ assets
 
     <!----Audio---->
 
-    <audio id="cardFlipAudio " src="assets/sounds/select.mp3 "></audio>
-    <audio id="victoryAudio " src="assets/sounds/victory.mp3 "></audio>
-    <audio id="defeatAudio " src="assets/sounds/defeat.mp3 "></audio>
-    <audio id="matchAudio " src="assets/sounds/blue-cymb.mp3 "></audio>
+    <audio id="cardFlipAudio" src="assets/sounds/select.mp3"></audio>
+    <audio id="victoryAudio" src="assets/sounds/victory.mp3"></audio>
+    <audio id="defeatAudio" src="assets/sounds/defeat.mp3"></audio>
+    <audio id="matchAudio" src="assets/sounds/blue-cymb.mp3"></audio>
 
     <!----/Audio---->
 
     <!----Scripts---->
 
     <script src="https://kit.fontawesome.com/bf032aaab3.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
-    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
-    <script src="assets/js/script.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 
     <!----/Scripts---->
 
