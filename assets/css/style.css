@@ -1,4 +1,37 @@
-     /*-----Containers-----
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background: #060AB2;
+}
+
+.hero-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.hero-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+
+/*-----Containers-----
      
      html body {
          height 100vh;
@@ -46,7 +79,9 @@
          flex: 1;
      }
      /*-----/Containers-----*/
-     /*----Game Title and Fonts----
+
+
+/*----Game Title and Fonts----
      
      h1 {
          font-family: "Bangers", cursive;
@@ -82,7 +117,9 @@
          background-color: darkgray;
      }
      /*----Buttons----*/
-     /*-----Cards-----
+
+
+/*-----Cards-----
      
      .hero-card-container {
          display: flex;
@@ -133,7 +170,9 @@
          background-color: aliceblue;
      }
      /*-----/Cards-----*/
-     /*----Flip CSS----
+
+
+/*----Flip CSS----
      
      .hero-card.flip {
          transform: rotateY(180deg);
@@ -175,7 +214,9 @@
          height: 60vh;
      }
      /*-----/Starting Page-----*/
-     /*-----Background Image-----
+
+
+/*-----Background Image-----
      
      .dc-background {
          background-image: url("../images/dc/dc_background.jpg");
@@ -195,7 +236,9 @@
          height: 100vh;
      }
      /*-----Background Image-----*/
-     /*-----Modal-----
+
+
+/*-----Modal-----
      
      .modal-image {
          height: 140px;
@@ -211,7 +254,9 @@
          text-align: center;
      }
      /*-----/Modal-----*/
-     /*-----Media Queries-----
+
+
+/*-----Media Queries-----
      
      @media screen and (min-width: 768px) {
          .modal-image {
