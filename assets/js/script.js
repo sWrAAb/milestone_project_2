@@ -1,9 +1,12 @@
 const cards = document.querySelectorAll('.hero-card');
 let hasFlippedCard = false;
+let lockBoard = false;
 let firstCard, secondCard;
-
+let numberOfMoves = 0;
+let match = 0;
 
 function flipCard() {
+    if (lockBoard) return;
     if (this === firstCard) return;
     this.classList.add('flip');
     if (!hasFlippedCard) {
@@ -12,8 +15,45 @@ function flipCard() {
         return;
     }
     secondCard = this;
-
+    checkForMatch();
 }
+
+function checkForMatch() {
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+    numberOfMoves++;
+    if (isMatch) {
+        disableCards();
+        match++;
+        if (match === 6) {
+            alert("You've won, well done, you used " + numberOfMoves + " moves.")
+        }
+    } else {
+        unflipCards()
+    }
+    console.log(numberOfMoves);
+}
+
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+    resetBoard();
+}
+
+function unflipCards() {
+    lockBoard = true;
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        resetBoard();
+    }, 1500);
+}
+
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 
