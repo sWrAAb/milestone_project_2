@@ -5,14 +5,12 @@
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    background: #060AB2;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 .hero-game {
     width: 640px;
-    height: 640px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -20,9 +18,10 @@ body {
 }
 
 .hero-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
+    width: 100px;
+    height: 100px;
     margin: 5px;
+    float: left;
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
@@ -43,15 +42,40 @@ body {
 .back-face {
     width: 100%;
     height: 100%;
-    padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: aliceblue;
     backface-visibility: hidden;
 }
 
 .front-face {
     transform: rotateY(180deg);
+    background: aliceblue;
+}
+
+
+/*----Fonts----*/
+
+h1 {
+    font-family: "Bangers", cursive;
+}
+
+.dc-background {
+    background-image: url("../images/dc/dc_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.title-container {
+    margin: auto;
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+    background: rgba(244, 244, 244, 0.4);
 }
 
 

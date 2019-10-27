@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="https://kit.fontawesome.com/bf032aaab3.js" crossorigin="anonymous"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
@@ -17,67 +15,91 @@
 
 </head>
 
-<body>
+<body class="dc-background">
 
-    <div class="col hero-game">
-        <div class="hero-card" data-framework="batman">
-            <img class="front-face" src="assets/images/heroes_dc/batman.png" alt="Batman">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-        </div>
-        <div class="hero-card" data-framework="batman">
-            <img class="front-face" src="assets/images/heroes_dc/batman.png" alt="Batman">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-        </div>
+    <div class="container-fluid p-0">
 
-        <div class="hero-card" data-framework="lantern">
-            <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-        </div>
-        <div class="hero-card" data-framework="lantern">
-            <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-        </div>
+        <div class="row">
 
-        <div class="hero-card" data-framework="flash">
-            <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-        </div>
-        <div class="hero-card" data-framework="flash">
-            <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+            <div class="col-12 col-sm-4 col-md-3 title-container">
+
+                <h1 class="game-title text-center">Match Heroes</h1>
+
+                <div class="col-12 game-info-container">
+
+                    <div class="col-6 game-info text-center">
+                        Time <span id="time-remaining">60</span>
+                    </div>
+                    <div class="col-6 game-info text-center">
+                        Moves <span id="moves">0</span>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="hero-card" data-framework="martian">
-            <img class="front-face" src="assets/images/heroes_dc/martian.jpg" alt="Martian Manhunter">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg " alt="DC-Logo">
-        </div>
-        <div class="hero-card " data-framework="martian">
-            <img class="front-face" src="assets/images/heroes_dc/martian.jpg " alt="Martian Manhunter">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg " alt="DC-Logo">
-        </div>
+        <div id="dc-game">
+            <div class="col-12 hero-game">
+                <div class="hero-card" data-framework="batman">
+                    <img class="front-face" src="assets/images/heroes_dc/batman.png" alt="Batman">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
+                <div class="hero-card" data-framework="batman">
+                    <img class="front-face" src="assets/images/heroes_dc/batman.png" alt="Batman">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
 
-        <div class="hero-card" data-framework="superman">
-            <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-        </div>
-        <div class="hero-card" data-framework="superman">
-            <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
-        </div>
+                <div class="hero-card" data-framework="lantern">
+                    <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
+                <div class="hero-card" data-framework="lantern">
+                    <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
 
-        <div class="hero-card " data-framework="wonderwoman">
-            <img class="front-face" src="assets/images/heroes_dc/wonderwoman.jfif " alt="Wonderwoman">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg " alt="DC-Logo">
-        </div>
-        <div class="hero-card " data-framework="wonderwoman">
-            <img class="front-face" src="assets/images/heroes_dc/wonderwoman.jfif " alt="Wonderwoman">
-            <img class="back-face" src="assets/images/dc/dc_logo.jpg " alt="DC-Logo">
-        </div>
+                <div class="hero-card" data-framework="flash">
+                    <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
+                <div class="hero-card" data-framework="flash">
+                    <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
 
+                <div class="hero-card" data-framework="martian">
+                    <img class="front-face" src="assets/images/heroes_dc/martian.jpg" alt="Martian Manhunter">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg " alt="DC-Logo">
+                </div>
+                <div class="hero-card" data-framework="martian">
+                    <img class="front-face" src="assets/images/heroes_dc/martian.jpg" alt="Martian Manhunter">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
+
+                <div class="hero-card" data-framework="superman">
+                    <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
+                <div class="hero-card" data-framework="superman">
+                    <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
+
+                <div class="hero-card" data-framework="wonderwoman">
+                    <img class="front-face" src="assets/images/heroes_dc/wonderwoman.jfif" alt="Wonderwoman">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
+                <div class="hero-card" data-framework="wonderwoman">
+                    <img class="front-face" src="assets/images/heroes_dc/wonderwoman.jfif" alt="Wonderwoman">
+                    <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
+                </div>
+            </div>
+
+        </div>
 
     </div>
-
-
 
 
 
@@ -665,6 +687,7 @@ assets
 
     <!----Scripts---->
 
+    <script src="https://kit.fontawesome.com/bf032aaab3.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js "></script>

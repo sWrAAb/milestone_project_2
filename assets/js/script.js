@@ -1,9 +1,11 @@
-const cards = document.querySelectorAll('.hero-card');
+const cards = document.querySelectorAll(".hero-card");
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let numberOfMoves = 0;
 let match = 0;
+let timer = document.getElementById("time-remaining")
+let moves = document.getElementById("moves");
 
 function flipCard() {
     if (lockBoard) return;
@@ -16,21 +18,26 @@ function flipCard() {
     }
     secondCard = this;
     checkForMatch();
+
 }
+
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     numberOfMoves++;
+    this.moves.innerText = numberOfMoves;
     if (isMatch) {
         disableCards();
         match++;
-        if (match === 6) {
-            alert("You've won, well done, you used " + numberOfMoves + " moves.")
-        }
     } else {
         unflipCards()
     }
     console.log(numberOfMoves);
+    setTimeout(() => {
+        if (match === 6) {
+            alert("You've won, well done, you used " + numberOfMoves + " moves.")
+        }
+    }, 1000);
 }
 
 function disableCards() {
@@ -52,6 +59,14 @@ function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
+(function shuffle() {
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 12);
+        card.style.order = randomPos;
+    });
+})();
+
+
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 

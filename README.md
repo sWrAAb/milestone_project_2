@@ -18,6 +18,5 @@ flip card animation: https://www.w3schools.com
 styles from: https://css-tricks.com
 
 sounds from: https://freesound.org
-
-shuffle array : https://jsfiddle.net/C6LPY/2/
+ 
 
