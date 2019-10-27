@@ -1,3 +1,23 @@
+const cards = document.querySelectorAll('.hero-card');
+let hasFlippedCard = false;
+let firstCard, secondCard;
+
+
+function flipCard() {
+    if (this === firstCard) return;
+    this.classList.add('flip');
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+        return;
+    }
+    secondCard = this;
+
+}
+
+
+
+
 /*----Modal starts on page load----
 
 $("#restart-game-modal").modal("show");

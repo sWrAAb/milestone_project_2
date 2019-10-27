@@ -30,6 +30,30 @@ body {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
+.hero-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.hero-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: aliceblue;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
 
 /*-----Containers-----
      
