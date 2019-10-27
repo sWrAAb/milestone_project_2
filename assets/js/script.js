@@ -1,9 +1,9 @@
-/*----Modal starts on page load----*/
+/*----Modal starts on page load----
 
 $("#restart-game-modal").modal("show");
 $("#body-wrapper").addClass("d-none");
 
-/*----Modal has two images. Each one loads different game board.----*/
+/*----Modal has two images. Each one loads different game board.----
 
 $("#dc-modal-image").click(function() {
     $("#starting-page").addClass("d-none");
@@ -23,13 +23,14 @@ $("#marvel-modal-image").click(function() {
         .addClass("marvel-background");
 });
 
-/*----Restart game button. Brings back starting modal----*/
+/*----Restart game button. Brings back starting modal----
 
 $(".link-info-container").click(function() {
     $("#myModal").modal("show");
 })
 
-/*----Game----*/
+/* number of moves jquery*/
+/*----Game----
 
 const cards = document.querySelectorAll(".hero-card");
 
@@ -39,8 +40,12 @@ let firstCard, secondCard;
 
 var flipSound = document.getElementById("cardFlipAudio");
 var matchSound = document.getElementById("matchAudio");
+var defeatSound = document.getElementById("defeatAudio");
 
 var displayMoves = document.getElementById("moves");
+
+var numberOfMoves = 0;
+var match = 0;
 
 class HeroFlipoff {
     constructor(totalTime, cards) {
@@ -55,7 +60,7 @@ class HeroFlipoff {
         this.totalClicks = null;
         this.timeRemaining = this.totalTime;
         this.matchedCards = [];
-        /* 20 */
+        
     }
 }
 
@@ -79,8 +84,14 @@ function flipCard() {
 }
 
 function checkForMatch() {
+    numberOfMoves++;
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-    isMatch ? disableCards() : unflipCards();
+
+    if (match) {
+        disableCards();
+        match++;
+    } else
+        unflipCards();
 
 }
 

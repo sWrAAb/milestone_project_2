@@ -1,4 +1,4 @@
-     /*-----Containers-----*/
+     /*-----Containers-----
      
      html body {
          height 100vh;
@@ -46,7 +46,7 @@
          flex: 1;
      }
      /*-----/Containers-----*/
-     /*----Game Title and Fonts----*/
+     /*----Game Title and Fonts----
      
      h1 {
          font-family: "Bangers", cursive;
@@ -76,18 +76,17 @@
      .link-text:hover {
          cursor: pointer;
      }
-     /*----Buttons----*/
+     /*----Buttons----
      
      .restart-game-button {
          background-color: darkgray;
      }
      /*----Buttons----*/
-     /*-----Cards-----*/
+     /*-----Cards-----
      
      .hero-card-container {
          display: flex;
          perspective: 1000px;
-         background: transparent;
      }
      
      .hero-card {
@@ -134,7 +133,7 @@
          background-color: aliceblue;
      }
      /*-----/Cards-----*/
-     /*----Flip CSS----*/
+     /*----Flip CSS----
      
      .hero-card.flip {
          transform: rotateY(180deg);
@@ -152,7 +151,7 @@
      .back {
          backface-visibility: hidden;
      }
-     /*----/Flip CSS----*/
+     /*----/Flip CSS----
      
      .hero-card-container:hover {
          cursor: pointer;
@@ -161,7 +160,7 @@
      .hero-card:hover {
          cursor: grab;
      }
-     /*-----Starting Page-----*/
+     /*-----Starting Page-----
      
      #starting-page {
          width: 100vw;
@@ -176,7 +175,7 @@
          height: 60vh;
      }
      /*-----/Starting Page-----*/
-     /*-----Background Image-----*/
+     /*-----Background Image-----
      
      .dc-background {
          background-image: url("../images/dc/dc_background.jpg");
@@ -196,7 +195,7 @@
          height: 100vh;
      }
      /*-----Background Image-----*/
-     /*-----Modal-----*/
+     /*-----Modal-----
      
      .modal-image {
          height: 140px;
@@ -212,7 +211,7 @@
          text-align: center;
      }
      /*-----/Modal-----*/
-     /*-----Media Queries-----*/
+     /*-----Media Queries-----
      
      @media screen and (min-width: 768px) {
          .modal-image {
