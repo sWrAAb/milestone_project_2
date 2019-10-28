@@ -5,49 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Ubuntu:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
     <title>HeroFlipoff</title>
-
 </head>
 
 <body>
-
     <div id="starting-page" class="m-0 p-0">
-
+        <div class="div"></div>
         <img id="game-logo" class="img-fluid m-auto d-block" src="assets/images/marvels_vs_dc_logo.jpg" alt="Game Logo">
         <h1 class="game-title">Hero Flipoff</h1>
     </div>
-
     <main id="body-wrapper" class="d-none">
-
         <div class="container-fluid p-0">
-
             <div class="row m-0 p-0">
-
-                <div class="col-12 col-sm-4 title-container">
-
+                <div id="title-container" class="col-12 col-sm-4 title-container">
                     <h1 class="text-center">Match Heroes</h1>
-
                     <div class="col-12 game-info-container">
-
+                        <div class="col-12 px-1 button-container text-center">
+                            <div class="col-6">
+                                <button class="restart-button top-buttons"><i class="fas fa-undo-alt" title="reset cards button"></i></button>
+                            </div>
+                            <div class="col-6">
+                                <button class="mute-button top-buttons"><i class="fas fa-volume-mute" title="mute button"></i></button>
+                            </div>
+                        </div>
                         <div class="col-6 game-info text-center">
                             Time <span id="time-remaining">60</span>
                         </div>
                         <div class="col-6 game-info text-center">
                             Moves <span id="moves">0</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             <div id="dc-game" class="d-none">
                 <div class="col-12 hero-game">
                     <div class="hero-card" data-framework="batman">
@@ -58,7 +51,6 @@
                         <img class="front-face" src="assets/images/heroes_dc/batman.png" alt="Batman">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
                     </div>
-
                     <div class="hero-card" data-framework="lantern">
                         <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
@@ -67,7 +59,6 @@
                         <img class="front-face" src="assets/images/heroes_dc/lantern.jfif" alt="Green Lantern">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
                     </div>
-
                     <div class="hero-card" data-framework="flash">
                         <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
@@ -76,7 +67,6 @@
                         <img class="front-face" src="assets/images/heroes_dc/flash.jfif" alt="Flash">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
                     </div>
-
                     <div class="hero-card" data-framework="martian">
                         <img class="front-face" src="assets/images/heroes_dc/martian.jpg" alt="Martian Manhunter">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
@@ -85,7 +75,6 @@
                         <img class="front-face" src="assets/images/heroes_dc/martian.jpg" alt="Martian Manhunter">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
                     </div>
-
                     <div class="hero-card" data-framework="superman">
                         <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
@@ -94,7 +83,6 @@
                         <img class="front-face" src="assets/images/heroes_dc/Superman.png" alt="Superman">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
                     </div>
-
                     <div class="hero-card" data-framework="wonderwoman">
                         <img class="front-face" src="assets/images/heroes_dc/wonderwoman.jfif" alt="Wonderwoman">
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
@@ -104,9 +92,7 @@
                         <img class="back-face" src="assets/images/dc/dc_logo.jpg" alt="DC-Logo">
                     </div>
                 </div>
-
             </div>
-
             <div id="marvel-game" class="d-none">
                 <div class="col-12 hero-game">
                     <div class="hero-card" data-framework="captain_america">
@@ -163,15 +149,9 @@
                         <img class="back-face" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel-Logo">
                     </div>
                 </div>
-
             </div>
-
-
-
         </div>
-
     </main>
-
     <div class="modal" id="restart-game-modal" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -181,8 +161,8 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-12 modal-select">
-                            <img id="dc-modal-image" class="modal-image" data-dismiss="modal" src="assets/images/dc/dc_logo.jpg" alt="DC">
-                            <img id="marvel-modal-image" class="modal-image" data-dismiss="modal" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel">
+                            <img id="dc-modal-image" class="modal-image m-auto" data-dismiss="modal" src="assets/images/dc/dc_logo.jpg" alt="DC">
+                            <img id="marvel-modal-image" class="modal-image m-auto" data-dismiss="modal" src="assets/images/marvel/marvel_logo.jpeg" alt="Marvel">
 
                         </div>
                     </div>

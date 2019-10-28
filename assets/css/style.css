@@ -25,6 +25,10 @@ body {
     height: 60vh;
 }
 
+.div {
+    height: 15vh;
+}
+
 
 /*-----/Starting Page-----*/
 
@@ -78,7 +82,12 @@ body {
 
 .game-info {
     float: left;
-    font-family: 'Schoolbell', cursive;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+}
+
+.button-container {
+    float: left;
 }
 
 
@@ -107,20 +116,35 @@ h1 {
 }
 
 .title-container {
-    margin: 5px auto;
+    margin: auto;
     width: 100%;
     text-align: center;
     border: 1px solid darkgray;
     border-radius: 10px;
-    background: rgba(244, 244, 244, 0.4);
+}
+
+.dc-title-container {
+    box-shadow: 5px 10px rgba(143, 154, 255, 0.1);
+    background: rgba(143, 154, 255, 0.3);
+}
+
+.marvel-title-container {
+    box-shadow: 5px 10px rgba(255, 142, 142, 0.1);
+    background: rgba(255, 142, 142, 0.3);
+}
+
+.restart-button {}
+
+.top-buttons {
+    justify-content: space-between;
 }
 
 
 /*-----Modal-----*/
 
 .modal-image {
-    height: 140px;
-    width: 140px;
+    height: 135px;
+    width: 135px;
     float: left;
 }
 
@@ -130,12 +154,20 @@ h1 {
 
 h5 {
     text-align: center;
+    font-family: "Bangers", cursive;
+    font-size: 2em;
+    text-shadow: 2px 2px #db5656;
 }
 
 @media screen and (min-width: 360px) {
     .hero-card {
         height: 100px;
         width: 100px;
+    }
+    .modal-image {
+        height: 155px;
+        width: 155px;
+        float: left;
     }
 }
 
@@ -144,12 +176,22 @@ h5 {
         height: 105px;
         width: 105px;
     }
+    .modal-image {
+        height: 162px;
+        width: 162px;
+        float: left;
+    }
 }
 
 @media screen and (min-width: 410px) {
     .hero-card {
         height: 117px;
         width: 117px;
+    }
+    .modal-image {
+        height: 180px;
+        width: 180px;
+        float: left;
     }
 }
 
@@ -160,6 +202,14 @@ h5 {
     .hero-card {
         height: 142px;
         width: 142px;
+    }
+    #game-logo {
+        width: 100vw;
+        height: 60vh;
+    }
+    .modal-image {
+        height: 233px;
+        width: 233px;
     }
 }
 
@@ -182,6 +232,10 @@ h5 {
     .hero-card {
         height: 232px;
         width: 232px;
+    }
+    #game-logo {
+        width: 60vw;
+        height: 60vh;
     }
 }
 

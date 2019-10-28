@@ -6,6 +6,7 @@ $("#dc-modal-image").click(function() {
     $("#dc-game").removeClass("d-none");
     $("#marvel-game").addClass("d-none");
     $("#body-wrapper").removeClass("d-none");
+    $("#title-container").addClass("dc-title-container");
     $(".container-fluid").removeClass("marvel-background")
         .addClass("dc-background");
     /*timer();*/
@@ -16,9 +17,18 @@ $("#marvel-modal-image").click(function() {
     $("#dc-game").addClass("d-none");
     $("#marvel-game").removeClass("d-none");
     $("#body-wrapper").removeClass("d-none");
+    $("#title-container").addClass("marvel-title-container");
     $(".container-fluid").removeClass("dc-background")
         .addClass("marvel-background");
     /* timer();*/
+});
+
+$(".restart-button").click(function() {
+    location.reload();
+});
+
+$(".mute-button").click(function() {
+    muteAudio();
 });
 /*
 location.reload();*/
