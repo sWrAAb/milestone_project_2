@@ -140,6 +140,20 @@ h1 {
 }
 
 
+/*----Cursors----*/
+
+.blue-cursor {
+    cursor: url("../cursors/BlueGlowingCursor.cur"), default;
+}
+
+.red-cursor {
+    cursor: url("../cursors/RedGlowingCursor.cur"), default;
+}
+
+
+/*----/Cursors----*/
+
+
 /*-----Modal-----*/
 
 .modal-image {

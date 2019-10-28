@@ -5,7 +5,7 @@ $("#dc-modal-image").click(function() {
     $("#starting-page").addClass("d-none");
     $("#dc-game").removeClass("d-none");
     $("#marvel-game").addClass("d-none");
-    $("#body-wrapper").removeClass("d-none");
+    $("#body-wrapper").removeClass("d-none").addClass("blue-cursor");
     $("#title-container").addClass("dc-title-container");
     $(".container-fluid").removeClass("marvel-background")
         .addClass("dc-background");
@@ -16,7 +16,7 @@ $("#marvel-modal-image").click(function() {
     $("#starting-page").addClass("d-none");
     $("#dc-game").addClass("d-none");
     $("#marvel-game").removeClass("d-none");
-    $("#body-wrapper").removeClass("d-none");
+    $("#body-wrapper").removeClass("d-none").addClass("red-cursor");
     $("#title-container").addClass("marvel-title-container");
     $(".container-fluid").removeClass("dc-background")
         .addClass("marvel-background");
@@ -30,8 +30,7 @@ $(".restart-button").click(function() {
 $(".mute-button").click(function() {
     muteAudio();
 });
-/*
-location.reload();*/
+
 
 const cards = document.querySelectorAll(".hero-card");
 let hasFlippedCard = false;
@@ -41,12 +40,17 @@ let numberOfMoves = 0;
 let match = 0;
 let moves = document.getElementById("moves");
 
+var flipSound = document.getElementById("cardFlipAudio");
+var matchSound = document.getElementById("matchAudio");
+var defeatSound = document.getElementById("defeatAudio");
+var victorySound = document.getElementById("victoryAudio");
+
 
 function flipCard() {
-
     if (lockBoard) return;
     if (this === firstCard) return;
     this.classList.add('flip');
+    flipSound.play();
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
@@ -54,6 +58,7 @@ function flipCard() {
     }
     secondCard = this;
     checkForMatch();
+    flipSound.play();
 }
 
 function timer() {
@@ -63,6 +68,7 @@ function timer() {
             if (count === -1) {
                 clearInterval(timer);
                 setTimeout(() => {
+                    defeatSound.play()
                     alert("Out of time");
                 }, 1000);
             }
@@ -79,12 +85,14 @@ function checkForMatch() {
     this.moves.innerText = numberOfMoves;
     if (isMatch) {
         disableCards();
+        matchSound.play();
         match++;
     } else {
         unflipCards()
     }
     setTimeout(() => {
         if (match === 6) {
+            victorySound.play();
             alert("You've won, well done, you used " + numberOfMoves + " moves.")
         }
     }, 1000);
@@ -124,37 +132,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 /*----Modal starts on page load----
-
-$("#restart-game-modal").modal("show");
-$("#body-wrapper").addClass("d-none");
-
-/*----Modal has two images. Each one loads different game board.----
-
-$("#dc-modal-image").click(function() {
-    $("#starting-page").addClass("d-none");
-    $("#dc-game").removeClass("d-none");
-    $("#marvel-game").addClass("d-none");
-    $("#body-wrapper").removeClass("d-none");
-    $(".container-fluid").removeClass("marvel-background")
-        .addClass("dc-background");
-});
-
-$("#marvel-modal-image").click(function() {
-    $("#starting-page").addClass("d-none");
-    $("#dc-game").addClass("d-none");
-    $("#marvel-game").removeClass("d-none");
-    $("#body-wrapper").removeClass("d-none");
-    $(".container-fluid").removeClass("dc-background")
-        .addClass("marvel-background");
-});
-
-/*----Restart game button. Brings back starting modal----
-
-$(".link-info-container").click(function() {
-    $("#myModal").modal("show");
-})
-
-/* number of moves jquery*/
+ 
 /*----Game----
 
 const cards = document.querySelectorAll(".hero-card");
