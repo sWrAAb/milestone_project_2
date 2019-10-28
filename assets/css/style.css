@@ -107,7 +107,7 @@ h1 {
 }
 
 .title-container {
-    margin: auto;
+    margin: 5px auto;
     width: 100%;
     text-align: center;
     border: 1px solid darkgray;
@@ -141,20 +141,20 @@ h5 {
 
 @media screen and (min-width: 361px) {
     .hero-card {
-        height: 103px;
-        width: 103px;
+        height: 105px;
+        width: 105px;
     }
 }
 
 @media screen and (min-width: 410px) {
     .hero-card {
-        height: 115px;
-        width: 115px;
+        height: 117px;
+        width: 117px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    # .hero-game {
+    .hero-game {
         margin-top: 100px;
     }
     .hero-card {
@@ -171,6 +171,17 @@ h5 {
     .hero-card {
         height: 182px;
         width: 182px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-game {
+        margin-top: 50px;
+        width: 1000px;
+    }
+    .hero-card {
+        height: 232px;
+        width: 232px;
     }
 }
 

@@ -20,8 +20,8 @@ $("#marvel-modal-image").click(function() {
         .addClass("marvel-background");
     /* timer();*/
 });
-
-
+/*
+location.reload();*/
 
 const cards = document.querySelectorAll(".hero-card");
 let hasFlippedCard = false;
