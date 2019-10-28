@@ -8,7 +8,7 @@ $("#dc-modal-image").click(function() {
     $("#body-wrapper").removeClass("d-none");
     $(".container-fluid").removeClass("marvel-background")
         .addClass("dc-background");
-    timer();
+    /*timer();*/
 });
 
 $("#marvel-modal-image").click(function() {
@@ -18,7 +18,7 @@ $("#marvel-modal-image").click(function() {
     $("#body-wrapper").removeClass("d-none");
     $(".container-fluid").removeClass("dc-background")
         .addClass("marvel-background");
-    timer();
+    /* timer();*/
 });
 
 

@@ -30,15 +30,15 @@ body {
 
 .hero-game {
     width: 640px;
-    margin: auto;
+    margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
 }
 
 .hero-card {
-    width: 100px;
-    height: 100px;
+    width: 86px;
+    height: 86px;
     margin: 5px;
     float: left;
     position: relative;
@@ -109,7 +109,6 @@ h1 {
 .title-container {
     margin: auto;
     width: 100%;
-    margin: 5px;
     text-align: center;
     border: 1px solid darkgray;
     border-radius: 10px;
@@ -132,6 +131,61 @@ h1 {
 h5 {
     text-align: center;
 }
+
+@media screen and (min-width: 360px) {
+    .hero-card {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 361px) {
+    .hero-card {
+        height: 103px;
+        width: 103px;
+    }
+}
+
+@media screen and (min-width: 410px) {
+    .hero-card {
+        height: 115px;
+        width: 115px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    # .hero-game {
+        margin-top: 100px;
+    }
+    .hero-card {
+        height: 142px;
+        width: 142px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero-game {
+        margin-top: 100px;
+        width: 800px;
+    }
+    .hero-card {
+        height: 182px;
+        width: 182px;
+    }
+}
+
+
+/*
+@media screen and (min-width: 375px) {
+    .hero-card {
+        height: 100px;
+        width: 100px;
+    }
+}
+*/
+
+
+/*-----/Modal-----*/
 
 
 /*-----/Modal-----*/
