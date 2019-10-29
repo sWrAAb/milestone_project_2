@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon_16x16.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon_32x32.ico">
     <link href="https://fonts.googleapis.com/css?family=Bangers|Ubuntu:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
@@ -24,12 +26,12 @@
                 <div id="title-container" class="col-12 col-sm-4 title-container">
                     <h1 class="text-center">Match Heroes</h1>
                     <div class="col-12 game-info-container">
-                        <div class="col-12 px-1 button-container text-center">
-                            <div class="col-6">
-                                <button class="restart-button top-buttons"><i class="fas fa-undo-alt" title="reset cards button"></i></button>
+                        <div class="row button-container text-center">
+                            <div class="col-6 m-0">
+                                <button class="restart-button top-buttons"><i class="fas fa-undo-alt fa-2x" title="Restart Game"></i></button>
                             </div>
-                            <div class="col-6">
-                                <button class="mute-button top-buttons"><i class="fas fa-volume-mute" title="mute button"></i></button>
+                            <div class="col-6 m-0">
+                                <button id="mute-button" class="mute-button top-buttons"><i onclick="myFunction(this)" class="fas fa-volume-mute fa-2x" title="Mute Audio"></i></button>
                             </div>
                         </div>
                         <div class="col-6 game-info text-center">

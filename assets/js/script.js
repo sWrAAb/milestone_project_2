@@ -9,7 +9,7 @@ $("#dc-modal-image").click(function() {
     $("#title-container").addClass("dc-title-container");
     $(".container-fluid").removeClass("marvel-background")
         .addClass("dc-background");
-    /*timer();*/
+    /*  timer();*/
 });
 
 $("#marvel-modal-image").click(function() {
@@ -27,9 +27,6 @@ $(".restart-button").click(function() {
     location.reload();
 });
 
-$(".mute-button").click(function() {
-    muteAudio();
-});
 
 
 const cards = document.querySelectorAll(".hero-card");
@@ -44,6 +41,21 @@ var flipSound = document.getElementById("cardFlipAudio");
 var matchSound = document.getElementById("matchAudio");
 var defeatSound = document.getElementById("defeatAudio");
 var victorySound = document.getElementById("victoryAudio");
+
+var sounds = document.getElementsByTagName("audio");
+
+$("#mute-button").click(function() {
+    for (var i = 0; i < sounds.length; ++i) {
+
+        sounds[i].muted = true;
+    }
+})
+
+
+
+function myFunction(x) {
+    x.classList.toggle("fa-volume-up");
+}
 
 
 function flipCard() {
