@@ -9,7 +9,7 @@ $("#dc-modal-image").click(function() {
     $("#title-container").addClass("dc-title-container");
     $(".container-fluid").removeClass("marvel-background")
         .addClass("dc-background");
-    /*  timer();*/
+    /* timer();*/
 });
 
 $("#marvel-modal-image").click(function() {
@@ -22,6 +22,15 @@ $("#marvel-modal-image").click(function() {
         .addClass("marvel-background");
     /* timer();*/
 });
+
+$("#victory-modal").click(function() {
+    location.reload();
+})
+
+$("#defeat-modal").click(function() {
+    location.reload();
+})
+
 
 $(".restart-button").click(function() {
     location.reload();
