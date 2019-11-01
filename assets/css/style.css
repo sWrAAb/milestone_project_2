@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-body {}
-
 
 /*-----Starting Page-----*/
 
@@ -20,6 +18,12 @@ body {}
 #game-logo {
     width: 100vw;
     height: 60vh;
+}
+
+.game-title {
+    font-family: "Bangers", cursive;
+    color: rgb(255, 255, 255);
+    font-size: 70px;
 }
 
 .div {
@@ -81,7 +85,7 @@ body {}
 }
 
 .button-container {
-    height: 60px;
+    height: 40px;
 }
 
 
@@ -89,6 +93,14 @@ body {}
 
 h1 {
     font-family: "Bangers", cursive;
+    color: rgb(36, 36, 46);
+    font-size: 70px;
+}
+
+h2 {
+    font-family: "Bangers", cursive;
+    font-size: 50px;
+    text-shadow: 2px 2px #ffffff;
 }
 
 .dc-background {
@@ -129,12 +141,10 @@ h1 {
     background: rgba(255, 142, 142, 0.3);
 }
 
-.restart-button {}
-
 .top-buttons {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: auto;
 }
 
@@ -202,6 +212,8 @@ h1 {
     animation: blinkingText 1.6s infinite ease-in-out;
 }
 
+.modal-header {}
+
 @keyframes blinkingText {
     0% {
         color: #000;
@@ -223,12 +235,14 @@ h1 {
     }
 }
 
-h5 {
+h4 {
     text-align: center;
     font-family: "Bangers", cursive;
-    font-size: 2em;
+    font-size: 40px;
     text-shadow: 2px 2px #db5656;
 }
+
+h5 {}
 
 @media screen and (min-width: 360px) {
     .hero-card {
@@ -282,6 +296,12 @@ h5 {
         height: 233px;
         width: 233px;
     }
+    .game-title {
+        font-family: 'Bangers', cursive;
+        padding-top: 20px;
+        color: rgb(243, 243, 243);
+        font-size: 150px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -292,6 +312,13 @@ h5 {
     .hero-card {
         height: 182px;
         width: 182px;
+    }
+    .game-title {
+        font-family: 'Bangers', cursive;
+        padding-top: 50px;
+        color: rgb(243, 243, 243);
+        font-size: 200px;
+        #
     }
 }
 

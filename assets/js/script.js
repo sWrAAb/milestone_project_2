@@ -1,5 +1,5 @@
-$("#defeat-modal").modal("show");
-/*$("#restart-game-modal").modal("show");
+/*$("#defeat-modal").modal("show");*/
+$("#restart-game-modal").modal("show");
 $("#body-wrapper").addClass("d-none");
 
 $("#dc-modal-image").click(function() {
@@ -10,8 +10,8 @@ $("#dc-modal-image").click(function() {
     $("#title-container").addClass("dc-title-container");
     $(".container-fluid").removeClass("marvel-background")
         .addClass("dc-background");
-    /* timer();
-});*/
+    /* timer();*/
+});
 
 $("#marvel-modal-image").click(function() {
     $("#starting-page").addClass("d-none");
