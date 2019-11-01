@@ -1,4 +1,5 @@
-$("#restart-game-modal").modal("show");
+$("#defeat-modal").modal("show");
+/*$("#restart-game-modal").modal("show");
 $("#body-wrapper").addClass("d-none");
 
 $("#dc-modal-image").click(function() {
@@ -9,10 +10,8 @@ $("#dc-modal-image").click(function() {
     $("#title-container").addClass("dc-title-container");
     $(".container-fluid").removeClass("marvel-background")
         .addClass("dc-background");
-    $(".hero-card").show();
-
-    /* timer();*/
-});
+    /* timer();
+});*/
 
 $("#marvel-modal-image").click(function() {
     $("#starting-page").addClass("d-none");
@@ -22,11 +21,10 @@ $("#marvel-modal-image").click(function() {
     $("#title-container").addClass("marvel-title-container");
     $(".container-fluid").removeClass("dc-background")
         .addClass("marvel-background");
-    $(".hero-card").show();
     /* timer();*/
 });
 
-
+/*deckAnimation();*/
 
 $("#victory-modal").click(function() {
     location.reload();
@@ -40,8 +38,6 @@ $("#defeat-modal").click(function() {
 $(".restart-button").click(function() {
     location.reload();
 });
-
-
 
 const cards = document.querySelectorAll(".hero-card");
 
@@ -65,10 +61,6 @@ $("#mute-button").click(function() {
         sounds[i].muted = true;
     }
 })
-
-var score = 0;
-var highscore = 0;
-
 
 function myFunction(x) {
     x.classList.toggle("fa-volume-up");
@@ -102,10 +94,6 @@ function timer() {
                 }, 1000);
             }
         }, 1000);
-
-
-
-
 }
 
 function checkForMatch() {
@@ -123,7 +111,6 @@ function checkForMatch() {
         if (match === 6) {
             victorySound.play();
             $("#victory-modal").modal("show");
-            /*alert("You've won, well done, you used " + numberOfMoves + " moves.")*/
         }
     }, 1000);
 }
@@ -154,52 +141,48 @@ function resetBoard() {
     });
 })();
 
-function victoryModal() {
-
-}
-
-
 cards.forEach(card => card.addEventListener("click", flipCard));
 
-
-
 // Register transitions
-$.Velocity
-    .RegisterEffect("trans.slideUpIn", {
-        defaultDuration: 400,
-        calls: [
-            [{ opacity: [1, 0], translateY: [0, 90] }]
-        ]
+
+function deckAnimation() {
+    $.Velocity
+        .RegisterEffect("trans.slideUpIn", {
+            defaultDuration: 400,
+            calls: [
+                [{ opacity: [1, 0], translateY: [0, 90] }]
+            ]
+        })
+        .RegisterEffect("trans.slideDownOut", {
+            defaultDuration: 400,
+            calls: [
+                [{ opacity: 0, translateY: 60 }]
+            ],
+            reset: { translateY: 0 }
+        });
+
+    // Initial selections
+    var boxes = $('.hero-game');
+    var btn = $('.modal-image');
+
+    // Define transitions here for re-use
+    var animIn = 'trans.slideUpIn';
+    var animOut = 'trans.slideDownOut';
+
+    // Select and slice divs
+    var divs = boxes.find('div'),
+        divsFirst = divs.slice(0, 6), // divs 1-6
+        divsLast = divs.slice(6); // rest of the divs after #6
+
+    btn.click(function() {
+        var seq = [
+            { elements: divs, properties: animOut, options: { display: false, easing: 'easeInCirc' } },
+            { elements: divsFirst, properties: animIn, options: { stagger: 50, display: false, easing: 'easeOutCirc' } },
+            { elements: divsLast, properties: 'transition.fadeIn', options: { duration: 400, display: false, easing: 'easeOutCirc' } }
+        ];
+
+        divs.velocity('stop');
+        $.Velocity.RunSequence(seq);
+
     })
-    .RegisterEffect("trans.slideDownOut", {
-        defaultDuration: 400,
-        calls: [
-            [{ opacity: 0, translateY: 60 }]
-        ],
-        reset: { translateY: 0 }
-    });
-// Initial selections
-var heroCardContainer = $(".hero-game");
-var btn = $(".modal-image");
-// Define transitions here for re-use
-var animIn = "trans.slideUpIn";
-var animOut = "trans.slideDownOut";
-// Select and slice divs
-var divs = heroCardContainer.find("div"),
-    divsFirst = divs.slice(0, 6), // divs 1-6
-    divsLast = divs.slice(6); // rest of the divs after #6
-btn.click(function() {
-    // Button effect
-    $(this)
-        .velocity({ scale: 0.95 }, 100).velocity({ scale: 1 }, 100)
-        .velocity({ backgroundColor: "#eee" }, { duration: 100, queue: false })
-        .velocity({ backgroundColor: "#fafafa" }, 300);
-    // Box animations   
-    var seq = [
-        { elements: divs, properties: animOut, options: { display: false, easing: "easeInCirc" } },
-        { elements: divsFirst, properties: animIn, options: { stagger: 50, display: false, easing: "easeOutCirc" } },
-        { elements: divsLast, properties: "transition.fadeIn", options: { duration: 400, display: false, easing: "easeOutCirc" } }
-    ];
-    divs.velocity("stop");
-    $.Velocity.RunSequence(seq);
-});
+}
