@@ -1,4 +1,4 @@
-/*$("#victory-modal").modal("show");*/
+/*$("#defeat-modal").modal("show");*/
 
 
 $("#restart-game-modal").modal("show");
@@ -14,7 +14,6 @@ $("#dc-modal-image").click(function() {
         .addClass("dc-background");
     /* timer();*/
 });
-
 $("#marvel-modal-image").click(function() {
     $("#starting-page").addClass("d-none");
     $("#dc-game").addClass("d-none");
