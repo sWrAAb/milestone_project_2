@@ -12,8 +12,9 @@ $("#dc-modal-image").click(function() {
     $("#title-container").addClass("dc-title-container");
     $(".container-fluid").removeClass("marvel-background")
         .addClass("dc-background");
-    /* timer();*/
+    timer();
 });
+
 $("#marvel-modal-image").click(function() {
     $("#starting-page").addClass("d-none");
     $("#dc-game").addClass("d-none");
@@ -22,13 +23,14 @@ $("#marvel-modal-image").click(function() {
     $("#title-container").addClass("marvel-title-container");
     $(".container-fluid").removeClass("dc-background")
         .addClass("marvel-background");
-    /* timer();*/
+    timer();
 });
 
 
 
 
 function deckAnimation() {
+    // Register transitions
     $.Velocity
         .RegisterEffect("trans.slideUpIn", {
             defaultDuration: 400,
@@ -58,6 +60,14 @@ function deckAnimation() {
         divsLast = divs.slice(6); // rest of the divs after #6
 
     btn.click(function() {
+
+        // Button effect
+        $(this)
+            .velocity({ scale: 0.95 }, 100).velocity({ scale: 1 }, 100)
+            .velocity({ backgroundColor: '#eee' }, { duration: 100, queue: false })
+            .velocity({ backgroundColor: '#fafafa' }, 300);
+
+        // Box animations   
         var seq = [
             { elements: divs, properties: animOut, options: { display: false, easing: 'easeInCirc' } },
             { elements: divsFirst, properties: animIn, options: { stagger: 50, display: false, easing: 'easeOutCirc' } },
@@ -67,17 +77,18 @@ function deckAnimation() {
         divs.velocity('stop');
         $.Velocity.RunSequence(seq);
 
-    })
+    });
 }
+
 /*deckAnimation();*/
 
 $("#victory-modal").click(function() {
     location.reload();
-})
+});
 
 $("#defeat-modal").click(function() {
     location.reload();
-})
+});
 
 
 $(".restart-button").click(function() {
@@ -87,9 +98,9 @@ $(".restart-button").click(function() {
 $("#restart-game-modal").modal({
     backdrop: "static",
     keyboard: false
-})
+});
 
-const cards = document.querySelectorAll(".hero-card");
+var cards = document.querySelectorAll(".hero-card");
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -109,12 +120,12 @@ $("#mute-button").click(function() {
     for (var i = 0; i < sounds.length; ++i) {
 
         sounds[i].muted = true;
-    }
-})
+    };
+});
 
 function myFunction(x) {
     x.classList.toggle("fa-volume-up");
-}
+};
 
 
 function flipCard() {
@@ -130,10 +141,10 @@ function flipCard() {
     secondCard = this;
     checkForMatch();
     flipSound.play();
-}
+};
 
 function timer() {
-    var count = 10,
+    var count = 60,
         timer = setInterval(function() {
             $("#time-remaining").html(count--);
             if (count === -1) {
@@ -142,9 +153,9 @@ function timer() {
                     defeatSound.play();
                     $("#defeat-modal").modal("show");
                 }, 1000);
-            }
+            };
         }, 1000);
-}
+};
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
