@@ -39,6 +39,11 @@ $(".restart-button").click(function() {
     location.reload();
 });
 
+$("#restart-game-modal").modal({
+    backdrop: 'static',
+    keyboard: false
+})
+
 const cards = document.querySelectorAll(".hero-card");
 
 let hasFlippedCard = false;
