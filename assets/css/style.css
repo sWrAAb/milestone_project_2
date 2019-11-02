@@ -176,6 +176,7 @@ h2 {
 }
 
 #victory-modal {
+    position: relative;
     background-image: url("../images/victory.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -185,6 +186,7 @@ h2 {
 }
 
 #defeat-modal {
+    position: relative;
     background-image: url("../images/defeat.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -193,13 +195,18 @@ h2 {
     width: 100vw;
 }
 
+.victory-modal-text {
+    font-size: 40px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .fade {
     min-width: 100%;
     margin: 0;
 }
 
 .modal-title {
-    font-size: 120px;
+    font-size: 80px;
     margin-bottom: 50px;
     -webkit-text-stroke: 1px black;
     color: white;
@@ -266,6 +273,9 @@ h5 {}
         width: 162px;
         float: left;
     }
+    .modal-title {
+        font-size: 110px;
+    }
 }
 
 @media screen and (min-width: 410px) {
@@ -301,6 +311,9 @@ h5 {}
         padding-top: 20px;
         color: rgb(243, 243, 243);
         font-size: 150px;
+    }
+    .modal-title {
+        font-size: 180px;
     }
 }
 
