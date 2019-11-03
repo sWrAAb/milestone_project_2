@@ -26,62 +26,6 @@ $("#marvel-modal-image").click(function() {
     timer();
 });
 
-
-
-
-function deckAnimation() {
-    // Register transitions
-    $.Velocity
-        .RegisterEffect("trans.slideUpIn", {
-            defaultDuration: 400,
-            calls: [
-                [{ opacity: [1, 0], translateY: [0, 90] }]
-            ]
-        })
-        .RegisterEffect("trans.slideDownOut", {
-            defaultDuration: 400,
-            calls: [
-                [{ opacity: 0, translateY: 60 }]
-            ],
-            reset: { translateY: 0 }
-        });
-
-    // Initial selections
-    var boxes = $('.hero-game');
-    var btn = $('.modal-image');
-
-    // Define transitions here for re-use
-    var animIn = 'trans.slideUpIn';
-    var animOut = 'trans.slideDownOut';
-
-    // Select and slice divs
-    var divs = boxes.find('div'),
-        divsFirst = divs.slice(0, 6), // divs 1-6
-        divsLast = divs.slice(6); // rest of the divs after #6
-
-    btn.click(function() {
-
-        // Button effect
-        $(this)
-            .velocity({ scale: 0.95 }, 100).velocity({ scale: 1 }, 100)
-            .velocity({ backgroundColor: '#eee' }, { duration: 100, queue: false })
-            .velocity({ backgroundColor: '#fafafa' }, 300);
-
-        // Box animations   
-        var seq = [
-            { elements: divs, properties: animOut, options: { display: false, easing: 'easeInCirc' } },
-            { elements: divsFirst, properties: animIn, options: { stagger: 50, display: false, easing: 'easeOutCirc' } },
-            { elements: divsLast, properties: 'transition.fadeIn', options: { duration: 400, display: false, easing: 'easeOutCirc' } }
-        ];
-
-        divs.velocity('stop');
-        $.Velocity.RunSequence(seq);
-
-    });
-}
-
-/*deckAnimation();*/
-
 $("#victory-modal").click(function() {
     location.reload();
 });
@@ -109,6 +53,7 @@ let numberOfMoves = 0;
 let match = 0;
 let moves = document.getElementById("moves");
 let highScore = 0;
+let isSoundOn = true;
 
 var flipSound = document.getElementById("cardFlipAudio");
 var matchSound = document.getElementById("matchAudio");
@@ -116,11 +61,20 @@ var defeatSound = document.getElementById("defeatAudio");
 var victorySound = document.getElementById("victoryAudio");
 var sounds = document.getElementsByTagName("audio");
 
-$("#mute-button").click(function() {
-    for (var i = 0; i < sounds.length; ++i) {
 
-        sounds[i].muted = true;
-    };
+
+$("#mute-button").click(function() {
+    if (isSoundOn) {
+        for (var i = 0; i < sounds.length; ++i) {
+            sounds[i].muted = true;
+        }
+        isSoundOn = false;
+    } else {
+        for (var i = 0; i < sounds.length; ++i) {
+            sounds[i].muted = false;
+        }
+        isSoundOn = true;
+    }
 });
 
 function myFunction(x) {
@@ -144,7 +98,7 @@ function flipCard() {
 };
 
 function timer() {
-    var count = 60,
+    var count = 30,
         timer = setInterval(function() {
             $("#time-remaining").html(count--);
             if (count === -1) {
@@ -156,6 +110,10 @@ function timer() {
             };
         }, 1000);
 };
+
+function stopTimer() {
+    clearInterval(timer);
+}
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -170,7 +128,9 @@ function checkForMatch() {
     }
     setTimeout(() => {
         if (match === 6) {
+            clearInterval(timer);
             victorySound.play();
+            victoryRedirect()
             $("#victory-modal").modal("show");
             $(".victory-modal-text").html("You have used " + numberOfMoves + " moves");
         }
@@ -202,5 +162,22 @@ function resetBoard() {
         card.style.order = randomPos;
     });
 })();
+
+
+/*
+function victoryRedirect() {
+    location.replace("victory.html");
+    redirectBack();
+}
+
+function redirectBack() {
+    $(body).click(function() {
+        location.replace("index.html");
+    })
+}*/
+
+
+
+
 
 cards.forEach(card => card.addEventListener("click", flipCard));
