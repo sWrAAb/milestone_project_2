@@ -103,6 +103,10 @@ h2 {
     text-shadow: 2px 2px #ffffff;
 }
 
+.red-text {
+    color: red;
+}
+
 .dc-background {
     background-image: url("../images/dc/dc_background.jpg");
     background-repeat: no-repeat;

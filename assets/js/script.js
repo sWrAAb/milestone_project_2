@@ -99,14 +99,16 @@ function flipCard() {
     checkForMatch();
     flipSound.play();
 };
-/*
+
+function victory() {
+    victorySound.play();
+    $("#victory-modal").modal("show");
+    $("#victory-modal-text").html()("You have used " + numberOfMoves + " moves");
+};
+
 function defeat() {
     defeatSound.play();
     $("#defeat-modal").modal("show");
-};*/
-
-function stopTimer() {
-    clearInterval(timer);
 };
 
 function timer() {
@@ -114,16 +116,14 @@ function timer() {
         timer = setInterval(function() {
             $("#time-remaining").html(count--);
             if (count === -1) {
+                defeat();
+            } else if (match === 6) {
                 clearInterval(timer);
-                setTimeout(() => {
-                    defeat();
-                }, 1000);
-            };
+            } else if (count <= 8) {
+                $("#time-remaining").addClass("red-text")
+            }
         }, 1000);
 };
-
-
-
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -134,31 +134,20 @@ function checkForMatch() {
         matchSound.play();
         match++;
     } else {
-        unflipCards()
+        unflipCards();
     }
     setTimeout(() => {
         if (match === 6) {
-            clearTimeout(timer);
-            /* victoryRedirect();*/
-            victorySound.play();
-
-            $("#victory-modal").modal("show");
-            $("#victory-modal-text").html()("You have used " + numberOfMoves + " moves");
+            victory();
         }
     }, 1000);
-}
-
-/*
-$("#victory-container").click(function() {
-    redirectBack();
-});*/
-
+};
 
 function disableCards() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
     resetBoard();
-}
+};
 
 function unflipCards() {
     lockBoard = true;
@@ -167,32 +156,18 @@ function unflipCards() {
         secondCard.classList.remove("flip");
         resetBoard();
     }, 1500);
-}
+};
 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-}
+};
+
 (function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     });
 })();
-
-/*--victory redirect--
-
-function victoryRedirect() {
-    location.replace("victory.html");
-    victorySound.play();
-}
-
-function redirectBack() {
-    location.replace("index.html");
-} */
-
-
-
-
 
 cards.forEach(card => card.addEventListener("click", flipCard));
