@@ -189,7 +189,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 100vh;
+    min-height: 100%;
     width: 100vw;
 }
 
@@ -202,7 +202,8 @@ h2 {
     width: 100vw;
 }
 
-.victory-modal-text {
+#victory-modal-text {
+    margin-top: 30vh;
     font-size: 26px;
     padding-left: 10px;
     font-family: 'Ubuntu', sans-serif;

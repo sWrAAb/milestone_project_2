@@ -1,6 +1,3 @@
-/*$("#defeat-modal").modal("show");*/
-
-
 $("#restart-game-modal").modal("show");
 $("#body-wrapper").addClass("d-none");
 
@@ -12,7 +9,10 @@ $("#dc-modal-image").click(function() {
     $("#title-container").addClass("dc-title-container");
     $(".container-fluid").removeClass("marvel-background")
         .addClass("dc-background");
-    timer();
+    setTimeout(() => {
+        $(".hero-game").removeClass("d-none");
+        timer();
+    }, 800);
 });
 
 $("#marvel-modal-image").click(function() {
@@ -23,7 +23,10 @@ $("#marvel-modal-image").click(function() {
     $("#title-container").addClass("marvel-title-container");
     $(".container-fluid").removeClass("dc-background")
         .addClass("marvel-background");
-    timer();
+    setTimeout(() => {
+        $(".hero-game").removeClass("d-none");
+        timer();
+    }, 800);
 });
 
 $("#victory-modal").click(function() {
@@ -96,24 +99,31 @@ function flipCard() {
     checkForMatch();
     flipSound.play();
 };
+/*
+function defeat() {
+    defeatSound.play();
+    $("#defeat-modal").modal("show");
+};*/
+
+function stopTimer() {
+    clearInterval(timer);
+};
 
 function timer() {
-    var count = 30,
+    var count = 40,
         timer = setInterval(function() {
             $("#time-remaining").html(count--);
             if (count === -1) {
                 clearInterval(timer);
                 setTimeout(() => {
-                    defeatSound.play();
-                    $("#defeat-modal").modal("show");
+                    defeat();
                 }, 1000);
             };
         }, 1000);
 };
 
-function stopTimer() {
-    clearInterval(timer);
-}
+
+
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -128,14 +138,21 @@ function checkForMatch() {
     }
     setTimeout(() => {
         if (match === 6) {
-            clearInterval(timer);
+            clearTimeout(timer);
+            /* victoryRedirect();*/
             victorySound.play();
-            victoryRedirect()
+
             $("#victory-modal").modal("show");
-            $(".victory-modal-text").html("You have used " + numberOfMoves + " moves");
+            $("#victory-modal-text").html()("You have used " + numberOfMoves + " moves");
         }
     }, 1000);
 }
+
+/*
+$("#victory-container").click(function() {
+    redirectBack();
+});*/
+
 
 function disableCards() {
     firstCard.removeEventListener("click", flipCard);
@@ -163,18 +180,16 @@ function resetBoard() {
     });
 })();
 
+/*--victory redirect--
 
-/*
 function victoryRedirect() {
     location.replace("victory.html");
-    redirectBack();
+    victorySound.play();
 }
 
 function redirectBack() {
-    $(body).click(function() {
-        location.replace("index.html");
-    })
-}*/
+    location.replace("index.html");
+} */
 
 
 
