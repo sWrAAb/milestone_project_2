@@ -103,7 +103,7 @@ function flipCard() {
 function victory() {
     victorySound.play();
     $("#victory-modal").modal("show");
-    $("#victory-modal-text").html()("You have used " + numberOfMoves + " moves");
+    document.getElementById("victory-modal-text").innerHTML = ("You have used " + numberOfMoves + " moves");
 };
 
 function defeat() {
@@ -112,7 +112,7 @@ function defeat() {
 };
 
 function timer() {
-    var count = 40,
+    var count = 60,
         timer = setInterval(function() {
             $("#time-remaining").html(count--);
             if (count === -1) {

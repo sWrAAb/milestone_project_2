@@ -76,8 +76,6 @@
     background: aliceblue;
 }
 
-.game-info-container {}
-
 .game-info {
     float: left;
     font-family: 'Ubuntu', sans-serif;
@@ -207,11 +205,12 @@ h2 {
 }
 
 #victory-modal-text {
-    margin-top: 30vh;
     font-size: 26px;
     padding-left: 10px;
     font-family: 'Ubuntu', sans-serif;
     text-shadow: -1px -1px 0 gold, 1px -1px 0 gold, -1px 1px 0 gold, 1px 1px 0 gold;
+    font-size: 30px;
+    padding-left: 14px;
 }
 
 .fade {
@@ -227,12 +226,11 @@ h2 {
 }
 
 .blinking {
+    margin: auto auto;
     font-family: 'Ubuntu', sans-serif;
     font-size: 34px;
     animation: blinkingText 1.6s infinite ease-in-out;
 }
-
-.modal-header {}
 
 @keyframes blinkingText {
     0% {
@@ -261,8 +259,6 @@ h4 {
     font-size: 40px;
     text-shadow: 2px 2px #db5656;
 }
-
-h5 {}
 
 @media screen and (min-width: 360px) {
     .hero-card {
@@ -296,10 +292,6 @@ h5 {}
     .blinking {
         font-size: 40px;
         margin-left: 10px;
-    }
-    .victory-modal-text {
-        font-size: 30px;
-        padding-left: 14px;
     }
 }
 
@@ -376,304 +368,3 @@ h5 {}
         height: 60vh;
     }
 }
-
-
-/*
-@media screen and (min-width: 375px) {
-    .hero-card {
-        height: 100px;
-        width: 100px;
-    }
-}
-*/
-
-
-/*-----/Modal-----*/
-
-
-/*-----/Modal-----*/
-
-
-/*-----Containers-----
-     
-     html body {
-         height 100vh;
-     }
-     
-     #content-wrapper {
-         display: flex;
-         min-height: 100vh;
-         flex-direction: column;
-     }
-     
-     #body-wrapper {
-         min-height: 100vh;
-     }
-     
-     * {
-         box-sizing: border-box;
-         max-height: 100vh;
-     }
-     
-     .game-info-container {
-         margin-bottom: 5px;
-         margin: auto;
-     }
-     
-     .game-info {
-         float: left;
-         font-family: 'Schoolbell', cursive;
-     }
-     
-     .title-container {
-         margin-top: 10px;
-         text-align: center;
-         border: 1px solid darkgray;
-         border-radius: 10px;
-         background: rgba(244, 244, 244, 0.4);
-     }
-     
-     .game-container {
-         width: 100%;
-         margin-top: 20px;
-     }
-     
-     main {
-         flex: 1;
-     }
-     /*-----/Containers-----*/
-
-
-/*----Game Title and Fonts----
-     
-     h1 {
-         font-family: "Bangers", cursive;
-     }
-     
-     .game-title {
-         font-family: "Bangers", cursive;
-         color: rgb(36, 36, 46);
-         font-size: 70px;
-     }
-     
-     .container-fluid {
-         overflow-x: hidden;
-     }
-     
-     #link-info-container {
-         color: rgb(165, 3, 3);
-         display: flex;
-     }
-     
-     .link-text {
-         display: inline;
-         font-family: "Bangers", cursive;
-         color: rgb(165, 3, 3);
-     }
-     
-     .link-text:hover {
-         cursor: pointer;
-     }
-     /*----Buttons----
-     
-     .restart-game-button {
-         background-color: darkgray;
-     }
-     /*----Buttons----*/
-
-
-/*-----Cards-----
-     
-     .hero-card-container {
-         display: flex;
-         perspective: 1000px;
-     }
-     
-     .hero-card {
-         height: 100px;
-         width: 100px;
-         border: 2px solid grey;
-         border-radius: 10px;
-         overflow: hidden;
-         display: flex;
-         position: relative;
-         text-align: center;
-         -webkit-transition: -webkit-transform 0.8s;
-         transition: -webkit-transform 0.8s;
-         -o-transition: transform 0.8s;
-         transition: transform 0.8s;
-         transition: transform 0.8s, -webkit-transform 0.8s;
-         -webkit-transform-style: preserve-3d;
-         transform-style: preserve-3d;
-         -webkit-transform: scale(1);
-         transform: scale(1);
-         -ms-transform: scale(1);
-     }
-     
-     .hero-card:active {
-         cursor: grabbing;
-         -webkit-transform: scale(0.97);
-         -ms-transform: scale(0.97);
-         transform: scale(0.97);
-         -webkit-transition: -webkit-transform .3s;
-         transition: -webkit-transform .3s;
-         -o-transition: transform .3s;
-         transition: transform .3s;
-         transition: transform .3s, -webkit-transform .3s;
-     }
-     
-     .back-logo {
-         width: 100%;
-         justify-content: center;
-     }
-     
-     .images {
-         height: 100px;
-         width: 100px;
-         background-color: aliceblue;
-     }
-     /*-----/Cards-----*/
-
-
-/*----Flip CSS----
-     
-     .hero-card.flip {
-         transform: rotateY(180deg);
-     }
-     
-     .front,
-     .back {
-         backface-visibility: hidden;
-     }
-     
-     .front {
-         backface-visibility: hidden;
-     }
-     
-     .back {
-         backface-visibility: hidden;
-     }
-     /*----/Flip CSS----
-     
-     .hero-card-container:hover {
-         cursor: pointer;
-     }
-     
-     .hero-card:hover {
-         cursor: grab;
-     }
-     /*-----Starting Page-----
-     
-     #starting-page {
-         width: 100vw;
-         height: 100vh;
-         background: black;
-         text-align: center;
-         overflow: hidden;
-     }
-     
-     #game-logo {
-         width: 100vw;
-         height: 60vh;
-     }
-     /*-----/Starting Page-----*/
-
-
-/*-----Background Image-----
-     
-     .dc-background {
-         background-image: url("../images/dc/dc_background.jpg");
-         background-repeat: no-repeat;
-         background-size: cover;
-         background-position: center center;
-         background-attachment: fixed;
-         height: 100vh;
-     }
-     
-     .marvel-background {
-         background-image: url("../images/marvel/marvel_background.jpg");
-         background-repeat: no-repeat;
-         background-size: cover;
-         background-position: center center;
-         background-attachment: fixed;
-         height: 100vh;
-     }
-     /*-----Background Image-----*/
-
-
-/*-----Modal-----
-     
-     .modal-image {
-         height: 140px;
-         width: 140px;
-         float: left;
-     }
-     
-     .modal-body {
-         max-width: 100vw;
-     }
-     
-     h5 {
-         text-align: center;
-     }
-     /*-----/Modal-----*/
-
-
-/*-----Media Queries-----
-     
-     @media screen and (min-width: 768px) {
-         .modal-image {
-             height: 220px;
-             width: 220px;
-         }
-         .hero-card {
-             height: 200px;
-             width: 200px;
-             border: 2px solid grey;
-             border-radius: 10px;
-             overflow: hidden;
-             transform: scale(1);
-         }
-         .images {
-             height: 200px;
-             width: 200px;
-         }
-         #game-logo {
-             width: 100vw;
-             height: 70vh;
-         }
-         .game-title {
-             font-family: 'Bangers', cursive;
-             padding-top: 20px;
-             color: rgb(243, 243, 243);
-             font-size: 150px;
-             opacity: 1;
-         }
-     }
-     
-     @media screen and (min-width: 992px) {
-         .hero-card {
-             height: 233px;
-             width: 233px;
-             border: 2px solid grey;
-             border-radius: 10px;
-             overflow: hidden;
-             transform: scale(1);
-         }
-         .images {
-             height: 233px;
-             width: 233px;
-         }
-         #game-logo {
-             width: 80vw;
-             height: 70vh;
-         }
-         .game-title {
-             font-family: 'Bangers', cursive;
-             padding-top: 50px;
-             color: rgb(243, 243, 243);
-             font-size: 200px;
-             opacity: 1;
-         }
-     }
-     /*-----/Media Queries-----*/
