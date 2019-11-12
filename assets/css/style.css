@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -36,8 +37,12 @@
 .hero-game {
     width: 640px;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-perspective: 1000px;
     perspective: 1000px;
 }
 
@@ -47,18 +52,33 @@
     margin: 5px;
     float: left;
     position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    -o-transition: transform .5s;
     transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
 .hero-card:active {
+    -webkit-transform: scale(0.97);
+    -ms-transform: scale(0.97);
     transform: scale(0.97);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
     transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
 }
 
 .hero-card.flip {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -68,10 +88,12 @@
     height: 100%;
     position: absolute;
     border-radius: 5px;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 .front-face {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     background: aliceblue;
 }
@@ -111,7 +133,6 @@ h2 {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    height: 100%;
     min-height: 100vh;
 }
 
@@ -121,7 +142,6 @@ h2 {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    height: 100%;
     min-height: 100vh;
 }
 
@@ -134,11 +154,13 @@ h2 {
 }
 
 .dc-title-container {
+    -webkit-box-shadow: 5px 10px rgba(143, 154, 255, 0.1);
     box-shadow: 5px 10px rgba(143, 154, 255, 0.1);
     background: rgba(143, 154, 255, 0.3);
 }
 
 .marvel-title-container {
+    -webkit-box-shadow: 5px 10px rgba(255, 142, 142, 0.1);
     box-shadow: 5px 10px rgba(255, 142, 142, 0.1);
     background: rgba(255, 142, 142, 0.3);
 }
@@ -229,7 +251,29 @@ h2 {
     margin: auto auto;
     font-family: 'Ubuntu', sans-serif;
     font-size: 34px;
+    -webkit-animation: blinkingText 1.6s infinite ease-in-out;
     animation: blinkingText 1.6s infinite ease-in-out;
+}
+
+@-webkit-keyframes blinkingText {
+    0% {
+        color: #000;
+    }
+    20% {
+        color: #000;
+    }
+    49% {
+        color: transparent;
+    }
+    50% {
+        color: transparent;
+    }
+    80% {
+        color: #000;
+    }
+    100% {
+        color: #000;
+    }
 }
 
 @keyframes blinkingText {
