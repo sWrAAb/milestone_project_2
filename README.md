@@ -1,17 +1,14 @@
 <h1 align="center">
   <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank"><img src="assets/images/game-logo.png" alt="Game Logo"/></a>
 </h1>
-
+<br>
 <div align=“center”>
+<a href="https://swraab.github.io/milestone_project_2/" target="_blank">Play Hero Flippof here</a>
+<br>
 <h2 align="center">
 <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank"><img src="assets/images/marvel_vs_dc_logo.jpg" alt="Matching card game for superhero fans"></a>
-
-
-<br>
-
-<a href="https://swraab.github.io/milestone_project_2/" target="_blank">Play Hero Flippof here</a>
-
 </div>
+<br>
 
 ## Table of Contents
 1. [**UX**](#ux)
@@ -80,12 +77,12 @@ As Developer:
 
 #### 1. Fonts
 
-Main font is <a href="https://fonts.google.com/specimen/Bangers" target="_blank">**Bangers**</a> which was imported via the head element of the html file from Google Fonts, with the backup font being set to a default of "Sans-serif". This font was used for purpose of giving a comic book apperance.
+Main font is <a href="https://fonts.google.com/specimen/Bangers" target="_blank">**Bangers**</a> which was imported via the head element of the html file from Google Fonts, with the backup font being set to a default of "Sans-serif". This font was used for purpose of giving a comic book apperance.<br>
 Secondary font used is <a href="https://fonts.google.com/specimen/Ubuntu" target="_blank">**Ubuntu**</a>.
 
 #### 2. Logo
 
-Game logo and favicon was designed on: <a href="hatchful@shopify.com" target="_blank">**Hatchful**</a>.
+Game logo and favicon was designed on: <a href="https://hatchful.shopify.com" target="_blank">**Hatchful**</a>.
 
 #### 3. Wireframes
 
@@ -101,7 +98,32 @@ These wireframes were created using <a href="https://balsamiq.com/" target="_bla
 
 ### Existing Features
 
+1. **Universe Select Modal**
+ - Modal is shown when on arriving at the page .
+ - Universe select modal has been programed not to give any other option other then selecting **DC** or **Marvel** Universe.
+ - Selecting an image, cards are shuffled, moves counter is set to zero and timer is restarted.
+ - This modal is also activated if the **Restart Game Button**, **Victory Modal** or **Defeat modal** has been clicked.
+
+2. **Victory Modal**
+ - Modal is shown when all cards are matched.
+ - On click, page is redirected to **Universe Select Modal**.
+
+3. **Defeat Modal**
+ - Modal is shown when timer reaches zero.
+ - On click, page is redirected to **Universe Select Modal**.
+
+4. **Reset Button**
+ - Reloads starting page containing the **Universe Select Modal**.
+
+5. **Mute Audio Button**
+ -  The mute audio button switches off/on all audio in the game, also switches its icons.
+
+6. **Moves Counter** 
+ - Counts the number of turns the player has taken in the current game, which is later displayed on the **Victory Modal**.
+
 ### Features Left to Implement
+
+
 
 ## Technologies Used
 
@@ -223,7 +245,7 @@ Code was regulary checked with w3c validators: https://validator.w3.org, https:/
 Card images were downloaded from http://www.fanpop.com, http://www.vhv.rs, https://www.writeups.org, http://hiclipart.com,
 http://pngguru.com.
 Background images were downloaded from: https://wallpaperaccess.com/dc-comics, http://sfwallpaper.com/categories/marvel-wallpaper.html and https://aminoapps.com/c/comics/page/blog/batman-vs-wolverine/Jvid_urkYKPPRvqBWw7m4nQZavn8er.
-Game logo was designed on:https://hatchful.shopify.com.
+Game logo was designed on:
 
 ### Sounds
 
