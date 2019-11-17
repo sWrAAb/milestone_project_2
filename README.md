@@ -9,7 +9,7 @@
 
 <br>
 
-[Play Hero Flippof here](https://swraab.github.io/milestone_project_2/)
+[Play Hero Flippof here](https://swraab.github.io/milestone_project_2/ target="_blank")
 
 </div>
 
@@ -20,10 +20,8 @@
     - [**User Stories**](#user-stories)
     - [**Design choices**](#design-choices)
         * [**1. Fonts**](#1-fonts)
-        * [**2. Color Scheme**](#2-color-scheme)
-        * [**3. Logo**](#3-logo)
-        * [**4. Geometry**](#4-geometry)
-        * [**5. Wireframes**](#5-wireframes)
+        * [**2. Logo**](#2-logo)
+        * [**3. Wireframes**](#3-wireframes)
     
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
@@ -60,42 +58,69 @@ Bootstrap 4 Framework was used to provide responsive grid. jQuery was used for e
 
 ### User Stories
 
-## Design Choices
+As a player,I want:
 
-### 1. Fonts
+1. Clean and aesthetically pleasing visuals
+2. Easy understanding of the game.
+3. Easy controls.
+4. Popular themes.
+5. Option to choose different themes.
+6. Audio and/or visual feedback when I play the game.
+7. Positive audio feedback when I complete a step in the game.
+8. Responsive game I can play on my phone or tablet.
+9. A child-friendly game.
 
-### 2. Logo
+As Developer:
+1. I want to create a pure Javascript game to test my skills.
+2. I want to create fully responsive app to showcase my skills to a potential employer.
+3. I want an on-going project I can enhance and improve over time as my skills grow.
+4. I want to learn how to create games. 
 
-### 3. Color Scheme
+### Design Choices
 
-### 4. Geometry
+#### 1. Fonts
 
-### 5. Wireframes
+Main font is [**Bangers**](https://fonts.google.com/specimen/Bangers target="_blank") which was imported via the head element of the html file from Google Fonts, with the backup font being set to a default of "Sans-serif". This font was used for purpose of giving a comic book apperance.
+Secondary font used is [**Ubuntu**](https://fonts.google.com/specimen/Ubuntu target="_blank").
 
-These wireframes were created using [Balsamiq](https://balsamiq.com/) during the Scope Plane part of the design and planning process for this project.
+#### 2. Logo
 
-- [Wireframes for mobile](https://ibb.co/T4NWdHc)
+Game logo and favicon were designed on: [**Hatchful**](hatchful@shopify.com target="_blank").
 
-- [Wireframes for desktop](https://ibb.co/vX2Yyyj)
+#### 3. Wireframes
+
+These wireframes were created using [Balsamiq](https://balsamiq.com/ target="_blank") during the Scope Plane part of the design and planning process for this project.
+
+- [Wireframes for mobile](https://ibb.co/T4NWdHc target="_blank")
+
+- [Wireframes for desktop](https://ibb.co/vX2Yyyj target="_blank")
 
 [Back to Top](#table-of-contents) 
+
+## Features
+
+### Existing Features
+
+### Features Left to Implement
 
 ## Technologies Used
 
 - This project uses HTML, CSS and JavaScript programming languages.
-- [Visual Studio Code](https://code.visualstudio.com) 
+- [Visual Studio Code](https://code.visualstudio.com target="_blank") 
     - Developer used **Visual Studio Code** for their IDE while building the website.
-    - [Bootstrap](https://www.bootstrapcdn.com/)
+    - [Bootstrap](https://www.bootstrapcdn.com/ target="_blank")
     - The project uses **Bootstrap** to simplify the structure of the website and make the website responsive.
-    - The project also uses Bootstrap to provide icons from [FontAwesome](https://www.bootstrapcdn.com/fontawesome/)
-- [JQuery](https://jquery.com)
+    - The project also uses Bootstrap to provide icons from [FontAwesome](https://www.bootstrapcdn.com/fontawesome/ target="_blank")
+- [JQuery](https://jquery.com target="_blank")
     - The project uses **JQuery** to simplify DOM manipulation.
-    - [Google Fonts](https://fonts.google.com/)
+    - [Google Fonts](https://fonts.google.com/ target="_blank")
     - The project uses **Google fonts** to style the website fonts.
-- [GitHub](https://github.com/)
+- [GitHub](https://github.com/ target="_blank")
     - This project uses **GitHub** to store and share all project code remotely.    
-- [AutoPrefixer](https://autoprefixer.github.io/)
+- [AutoPrefixer](https://autoprefixer.github.io/ target="_blank")
     - The project used **AutoPrefixer** to make sure all css prefixes were the most up to date versions. 
+
+    [Back to Top](#table-of-contents) 
 
 ## Testing 
 
@@ -103,9 +128,9 @@ Continuous testing for this application was carried throughout the entire develo
 
 ## Deployment
 
-This project was developed using the [Visual Studio Code](https://code.visualstudio.com), committed to git and pushed to GitHub using the built in function within VSCode. 
+This project was developed using the [Visual Studio Code](https://code.visualstudio.com target="_blank"), committed to git and pushed to GitHub using the built in function within VSCode. 
 
-To deploy Hero Flipoff to GitHub Pages from its [GitHub repository](https://github.com/sWrAAb/milestone_project_2), the following steps were taken: 
+To deploy Hero Flipoff to GitHub Pages from its [GitHub repository](https://github.com/sWrAAb/milestone_project_2 target="_blank"), the following steps were taken: 
 1. Log into GitHub. 
 2. From the list of repositories on the screen, select **sWrAAb/milestone_project_2**.
 3. From the menu items near the top of the page, select **Settings**.
@@ -118,7 +143,7 @@ To deploy Hero Flipoff to GitHub Pages from its [GitHub repository](https://gith
 ### How to run this project locally
 
 To clone this project from GitHub:
-1. Follow this link to the [Hero Flipoff GitHub repository](https://github.com/sWrAAb/milestone_project_2).
+1. Follow this link to the [Hero Flipoff GitHub repository](https://github.com/sWrAAb/milestone_project_2 target="_blank").
 2. Under the repository name, click "Clone or download".
 3. In the Clone with HTTPs section, copy the clone URL for the repository. 
 4. In your local IDE open Git Bash.
@@ -129,9 +154,9 @@ git clone https://github.com/USERNAME/REPOSITORY
 ```
 7. Press Enter. Your local clone will be created.
 
-Further reading and troubleshooting on cloning a repository from GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
+[Back to Top](#table-of-contents) 
 
-
+## Credits
 
 
 
