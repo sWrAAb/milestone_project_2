@@ -9,7 +9,7 @@
 
 <br>
 
-[Play Hero Flippof here](https://swraab.github.io/milestone_project_2/ target="_blank")
+<a href="https://swraab.github.io/milestone_project_2/" target="_blank">Play Hero Flippof here</a>
 
 </div>
 
@@ -19,9 +19,9 @@
     - [**Functionality of Project**](#functionality)
     - [**User Stories**](#user-stories)
     - [**Design choices**](#design-choices)
-        * [**1. Fonts**](#1-fonts)
-        * [**2. Logo**](#2-logo)
-        * [**3. Wireframes**](#3-wireframes)
+        - [**1. Fonts**](#1-fonts)
+        - [**2. Logo**](#2-logo)
+        - [**3. Wireframes**](#3-wireframes)
     
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
@@ -80,20 +80,20 @@ As Developer:
 
 #### 1. Fonts
 
-Main font is [**Bangers**](https://fonts.google.com/specimen/Bangers target="_blank") which was imported via the head element of the html file from Google Fonts, with the backup font being set to a default of "Sans-serif". This font was used for purpose of giving a comic book apperance.
-Secondary font used is [**Ubuntu**](https://fonts.google.com/specimen/Ubuntu target="_blank").
+Main font is <a href="https://fonts.google.com/specimen/Bangers" target="_blank">**Bangers**</a> which was imported via the head element of the html file from Google Fonts, with the backup font being set to a default of "Sans-serif". This font was used for purpose of giving a comic book apperance.
+Secondary font used is <a href="https://fonts.google.com/specimen/Ubuntu" target="_blank">**Ubuntu**</a>.
 
 #### 2. Logo
 
-Game logo and favicon were designed on: [**Hatchful**](hatchful@shopify.com target="_blank").
+Game logo and favicon was designed on: <a href="hatchful@shopify.com" target="_blank">**Hatchful**</a>.
 
 #### 3. Wireframes
 
-These wireframes were created using [Balsamiq](https://balsamiq.com/ target="_blank") during the Scope Plane part of the design and planning process for this project.
+These wireframes were created using <a href="https://balsamiq.com/" target="_blank">**Balsamiq**</a> during the Scope Plane part of the design and planning process for this project.
 
-- [Wireframes for mobile](https://ibb.co/T4NWdHc target="_blank")
+- <a href="https://ibb.co/T4NWdHc" target="_blank">Wireframes for mobile</a>
 
-- [Wireframes for desktop](https://ibb.co/vX2Yyyj target="_blank")
+- <a href="https://ibb.co/vX2Yyyj" target="_blank">Wireframes for desktop</a>
 
 [Back to Top](#table-of-contents) 
 
@@ -106,21 +106,19 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/ target="_bl
 ## Technologies Used
 
 - This project uses HTML, CSS and JavaScript programming languages.
-- [Visual Studio Code](https://code.visualstudio.com target="_blank") 
+- <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>
     - Developer used **Visual Studio Code** for their IDE while building the website.
-    - [Bootstrap](https://www.bootstrapcdn.com/ target="_blank")
+- <a href="https://www.bootstrapcdn.com/" target="_blank">Bootstrap</a>
     - The project uses **Bootstrap** to simplify the structure of the website and make the website responsive.
-    - The project also uses Bootstrap to provide icons from [FontAwesome](https://www.bootstrapcdn.com/fontawesome/ target="_blank")
-- [JQuery](https://jquery.com target="_blank")
+    - The project also uses Bootstrap to provide icons from [FontAwesome](https://www.bootstrapcdn.com/fontawesome/)
+- <a href="https://jquery.com" target="_blank"></a>
     - The project uses **JQuery** to simplify DOM manipulation.
-    - [Google Fonts](https://fonts.google.com/ target="_blank")
+- <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
     - The project uses **Google fonts** to style the website fonts.
-- [GitHub](https://github.com/ target="_blank")
+- <a href="https://github.com/" target="_blank">GitHub</a>
     - This project uses **GitHub** to store and share all project code remotely.    
-- [AutoPrefixer](https://autoprefixer.github.io/ target="_blank")
+- <a href="https://autoprefixer.github.io/" target="_blank">AutoPrefixer</a>
     - The project used **AutoPrefixer** to make sure all css prefixes were the most up to date versions. 
-
-    [Back to Top](#table-of-contents) 
 
 ## Testing 
 
@@ -128,9 +126,9 @@ Continuous testing for this application was carried throughout the entire develo
 
 ## Deployment
 
-This project was developed using the [Visual Studio Code](https://code.visualstudio.com target="_blank"), committed to git and pushed to GitHub using the built in function within VSCode. 
+This project was developed using the <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>, committed to git and pushed to GitHub using the built in function within VSCode. 
 
-To deploy Hero Flipoff to GitHub Pages from its [GitHub repository](https://github.com/sWrAAb/milestone_project_2 target="_blank"), the following steps were taken: 
+To deploy Hero Flipoff to GitHub Pages from its <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank">GitHub repository</a>, the following steps were taken: 
 1. Log into GitHub. 
 2. From the list of repositories on the screen, select **sWrAAb/milestone_project_2**.
 3. From the menu items near the top of the page, select **Settings**.
@@ -143,7 +141,7 @@ To deploy Hero Flipoff to GitHub Pages from its [GitHub repository](https://gith
 ### How to run this project locally
 
 To clone this project from GitHub:
-1. Follow this link to the [Hero Flipoff GitHub repository](https://github.com/sWrAAb/milestone_project_2 target="_blank").
+1. Follow this link to the <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank">Hero Flipoff GitHub repository</a>.
 2. Under the repository name, click "Clone or download".
 3. In the Clone with HTTPs section, copy the clone URL for the repository. 
 4. In your local IDE open Git Bash.
@@ -153,8 +151,6 @@ To clone this project from GitHub:
 git clone https://github.com/USERNAME/REPOSITORY
 ```
 7. Press Enter. Your local clone will be created.
-
-[Back to Top](#table-of-contents) 
 
 ## Credits
 
