@@ -1,12 +1,12 @@
 <h1 align="center">
-  <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank"><img src="assets/images/game-logo.png" alt="Game Logo"/></a>
+  <a href="https://github.com/sWrAAb/milestone_project_2"><img src="assets/images/game-logo.png" alt="Game Logo"/></a>
 </h1>
 <br>
-<div style="text-align:center"><h2>
-<a href="https://swraab.github.io/milestone_project_2/" target="_blank">Play Hero Flippof here</a><h2>
+<div align="center"><h2>
+<a href="https://swraab.github.io/milestone_project_2/">Play Hero Flippof here</a><h2>
 <br>
 <h2 align="center">
-<a href="https://github.com/sWrAAb/milestone_project_2" target="_blank"><img src="assets/images/marvel_vs_dc_logo.jpg" alt="Matching card game for superhero fans"></a>
+<a href="https://github.com/sWrAAb/milestone_project_2"><img src="assets/images/marvel_vs_dc_logo.jpg" alt="Matching card game for superhero fans"></a>
 </div>
 <br>
 
@@ -44,7 +44,7 @@
 
 This Milestone project uses skills learned from fourth and fifth modules of the Full
 Stack Developer Course, Javascript Fundamentals & Interactive Frontend Development, to build a custom mobile-first fully
-responsive javascript matching game called <a href="https://swraab.github.io/milestone_project_2/" target="_blank">**Hero Flipoff**</a>. 
+responsive javascript matching game called <a href="https://swraab.github.io/milestone_project_2/">**Hero Flipoff**</a>. 
 The goal of the Hero Flipoff is to provide entertaining game. 
 
 ### Functionality of Project
@@ -76,20 +76,20 @@ As Developer:
 
 #### 1. Fonts
 
-Main font is <a href="https://fonts.google.com/specimen/Bangers" target="_blank">**Bangers**</a> which was imported via the head element of the html file from Google Fonts, with the backup font being set to a default of "Sans-serif". This font was used for purpose of giving a comic book apperance.<br>
-Secondary font used is <a href="https://fonts.google.com/specimen/Ubuntu" target="_blank">**Ubuntu**</a>.
+Main font is <a href="https://fonts.google.com/specimen/Bangers">**Bangers**</a> which was imported via the head element of the html file from Google Fonts, with the backup font being set to a default of "Sans-serif". This font was used for purpose of giving a comic book apperance.<br>
+Secondary font used is <a href="https://fonts.google.com/specimen/Ubuntu">**Ubuntu**</a>.
 
 #### 2. Logo
 
-Game logo and favicon was designed on: <a href="https://hatchful.shopify.com" target="_blank">**Hatchful**</a>.
+Game logo and favicon was designed on: <a href="https://hatchful.shopify.com">**Hatchful**</a>.
 
 #### 3. Wireframes
 
-These wireframes were created using <a href="https://balsamiq.com/" target="_blank">**Balsamiq**</a> during the Scope Plane part of the design and planning process for this project.
+These wireframes were created using <a href="https://balsamiq.com/">**Balsamiq**</a> during the Scope Plane part of the design and planning process for this project.
 
-- <a href="https://ibb.co/T4NWdHc" target="_blank">Wireframes for mobile</a>
+- <a href="https://ibb.co/T4NWdHc">Wireframes for mobile</a>
 
-- <a href="https://ibb.co/vX2Yyyj" target="_blank">Wireframes for desktop</a>
+- <a href="https://ibb.co/vX2Yyyj">Wireframes for desktop</a>
 
 [Back to Top](#table-of-contents) 
 
@@ -133,18 +133,18 @@ These wireframes were created using <a href="https://balsamiq.com/" target="_bla
 ## Technologies Used
 
 - This project uses HTML, CSS and JavaScript programming languages.
-- <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>
+- <a href="https://code.visualstudio.com">Visual Studio Code</a>
     - Developer used **Visual Studio Code** for their IDE while building the website.
-- <a href="https://www.bootstrapcdn.com/" target="_blank">Bootstrap</a>
+- <a href="https://www.bootstrapcdn.com/">Bootstrap</a>
     - The project uses **Bootstrap** to simplify the structure of the website and make the website responsive.
     - The project also uses Bootstrap to provide icons from [FontAwesome](https://www.bootstrapcdn.com/fontawesome/)
-- <a href="https://jquery.com" target="_blank"></a>
+- <a href="https://jquery.com"></a>
     - The project uses **JQuery** to simplify DOM manipulation.
-- <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+- <a href="https://fonts.google.com/">Google Fonts</a>
     - The project uses **Google fonts** to style the website fonts.
-- <a href="https://github.com/" target="_blank">GitHub</a>
+- <a href="https://github.com/">GitHub</a>
     - This project uses **GitHub** to store and share all project code remotely.    
-- <a href="https://autoprefixer.github.io/" target="_blank">AutoPrefixer</a>
+- <a href="https://autoprefixer.github.io/">AutoPrefixer</a>
     - The project used **AutoPrefixer** to make sure all css prefixes were the most up to date versions. 
 
 [Back to Top](#table-of-contents) 
@@ -155,9 +155,9 @@ Continuous testing for this application was carried throughout the entire develo
 
 ## Deployment
 
-This project was developed using the <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>, committed to git and pushed to GitHub using the built in function within VSCode. 
+This project was developed using the <a href="https://code.visualstudio.com">Visual Studio Code</a>, committed to git and pushed to GitHub using the built in function within VSCode. 
 
-To deploy Hero Flipoff to GitHub Pages from its <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank">GitHub repository</a>, the following steps were taken: 
+To deploy Hero Flipoff to GitHub Pages from its <a href="https://github.com/sWrAAb/milestone_project_2">GitHub repository</a>, the following steps were taken: 
 1. Log into GitHub. 
 2. From the list of repositories on the screen, select **sWrAAb/milestone_project_2**.
 3. From the menu items near the top of the page, select **Settings**.
@@ -170,7 +170,7 @@ To deploy Hero Flipoff to GitHub Pages from its <a href="https://github.com/sWrA
 ### How to run this project locally
 
 To clone this project from GitHub:
-1. Follow this link to the <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank">Hero Flipoff GitHub repository</a>.
+1. Follow this link to the <a href="https://github.com/sWrAAb/milestone_project_2">Hero Flipoff GitHub repository</a>.
 2. Under the repository name, click "Clone or download".
 3. In the Clone with HTTPs section, copy the clone URL for the repository. 
 4. In your local IDE open Git Bash.
