@@ -32,7 +32,6 @@
     - [**How to run this project locally**](#how-to-run-this-project-locally)
 
 6. [**Credits**](#credits)
-    - [**Content**](#content)
     - [**Media**](#media)
     - [**Code**](#code)
     - [**Acknowledgements**](#acknowledgements)
@@ -45,7 +44,7 @@
 
 This Milestone project uses skills learned from fourth and fifth modules of the Full
 Stack Developer Course, Javascript Fundamentals & Interactive Frontend Development, to build a custom mobile-first fully
-responsive javascript matching game called **Hero Flipoff**. 
+responsive javascript matching game called <a href="https://swraab.github.io/milestone_project_2/" target="_blank">**Hero Flipoff**</a>. 
 The goal of the Hero Flipoff is to provide entertaining game. 
 
 ### Functionality of Project
@@ -57,7 +56,7 @@ Bootstrap 4 Framework was used to provide responsive grid. jQuery was used for e
 
 As a player,I want:
 
-1. Clean and aesthetically pleasing visuals
+1. Clean and aesthetically pleasing visuals.
 2. Easy understanding of the game.
 3. Easy controls.
 4. Popular themes.
@@ -123,7 +122,13 @@ These wireframes were created using <a href="https://balsamiq.com/" target="_bla
 
 ### Features Left to Implement
 
+- Add more cards.
+- Add second player.
+- Add background music.
+- Add High Score Feature to store the best scores to local storage.
+- When the game is finished, next level starts with less time.
 
+[Back to Top](#table-of-contents) 
 
 ## Technologies Used
 
@@ -142,9 +147,11 @@ These wireframes were created using <a href="https://balsamiq.com/" target="_bla
 - <a href="https://autoprefixer.github.io/" target="_blank">AutoPrefixer</a>
     - The project used **AutoPrefixer** to make sure all css prefixes were the most up to date versions. 
 
+[Back to Top](#table-of-contents) 
+
 ## Testing 
 
-Continuous testing for this application was carried throughout the entire development. This was achieved through the Google Chrome devtools and a host of devices, from mobile to laptop and incorporating as many of the current mainstream browsers that are popular today, (Google Chrome, Firefox, Edge, Opera & Internet Explorer).
+Continuous testing for this application was carried throughout the entire development. This was achieved through the Google Chrome devtools and a host of devices, from mobile to laptop and incorporating as many of the current mainstream browsers that are popular today, (Google Chrome, Firefox, Edge, Opera & Internet Explorer). I tried to add an animation using velocity.js,
 
 ## Deployment
 
@@ -174,79 +181,32 @@ git clone https://github.com/USERNAME/REPOSITORY
 ```
 7. Press Enter. Your local clone will be created.
 
+[Back to Top](#table-of-contents)   
+
 ## Credits
 
+ ### Media
 
+  #### Images
 
+- Card images were downloaded from http://www.fanpop.com, http://www.vhv.rs, https://www.writeups.org, http://hiclipart.com,
+http://pngguru.com.<br>
+- Background images were downloaded from: https://wallpaperaccess.com/dc-comics, http://sfwallpaper.com/categories/marvel-wallpaper.html and https://aminoapps.com/c/comics/page/blog/batman-vs-wolverine/Jvid_urkYKPPRvqBWw7m4nQZavn8er.<br>
+- Modal images were downloaded from: https://www.business2community.com/business-intelligence/nevermind-new-avengers-infinity-war-movie-heres-become-hero-using-modern-business-intelligence-02043336 and https://www.businessinsider.com/nuclear-bomb-effects-video-red-cross-2019-10?r=US&IR=T
 
+#### Sounds
 
+All sounds were downloaded from: https://freesound.org.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### How to play
-
-Your goal is to pick two cards that match on each turn until all cards are matched. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Code
 
 
 styles from: https://css-tricks.com
 
  
 blinking text animation from: https://html-online.com/articles/blinking-text-css-animation/
+ 
 
-Code was regulary checked with w3c validators: https://validator.w3.org, https://jigsaw.w3.org/css-validator/
+###### <i>Disclaimer: This project was created for educational use only as part of the Code Institute Full Stack Software Development Course for Milestone 2 Grading!</i>
 
-
-### Images 
-
-Card images were downloaded from http://www.fanpop.com, http://www.vhv.rs, https://www.writeups.org, http://hiclipart.com,
-http://pngguru.com.
-Background images were downloaded from: https://wallpaperaccess.com/dc-comics, http://sfwallpaper.com/categories/marvel-wallpaper.html and https://aminoapps.com/c/comics/page/blog/batman-vs-wolverine/Jvid_urkYKPPRvqBWw7m4nQZavn8er.
-Game logo was designed on:
-
-### Sounds
-
-All sounds were downloaded from: https://freesound.org.
+[Back to Top](#table-of-contents)
