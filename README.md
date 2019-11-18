@@ -2,8 +2,8 @@
   <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank"><img src="assets/images/game-logo.png" alt="Game Logo"/></a>
 </h1>
 <br>
-<div style="text-align:center">
-<a href="https://swraab.github.io/milestone_project_2/" target="_blank"><h1>Play Hero Flippof here<h1></a>
+<div style="text-align:center"><h1>
+<a href="https://swraab.github.io/milestone_project_2/" target="_blank">Play Hero Flippof here</a><h1>
 <br>
 <h2 align="center">
 <a href="https://github.com/sWrAAb/milestone_project_2" target="_blank"><img src="assets/images/marvel_vs_dc_logo.jpg" alt="Matching card game for superhero fans"></a>
