@@ -3,7 +3,7 @@
 </h1>
 <br>
 <div align="center"><h2>
-<a href="https://swraab.github.io/milestone_project_2/">Play Hero Flippof here</a><h2><br>
+<a href="https://swraab.github.io/milestone_project_2/">Play Hero Flippof here</a><h2>
 <br>
 <h2 align="center">
 <a href="https://github.com/sWrAAb/milestone_project_2"><img src="assets/images/marvel_vs_dc_logo.jpg" alt="Matching card game for superhero fans"></a>
