@@ -186,7 +186,7 @@ That solved that bug, and victory screen is no longer interrupted.
 
 ### Fonts
 
-- Fonts are made responsive, so they are different size on every screen size.
+- Fonts are made responsive and their size changes with screen size.
 
 ### Move Counter
 
