@@ -169,6 +169,10 @@ Continuous testing for this application was carried throughout the entire develo
 - Modals were tested on every screen and orientation. Added 'data-backdrop="static"' to not allow a user to click outside of the modal and close same, and `data-keyboard="false" to remove pressing ESC button to close the modals. All modal images were tested to fit all screen sizes that led to different sizes of images on Universe Select modal for each screen.
 - Victory and Defeat modals were tested to see if they play sounds and redirect to Universe select modal on click.
 
+<h1 align="center">
+  <a href="https://github.com/sWrAAb/milestone_project_2"><img src="assets/images/test-images/uniselmodal.png" alt="Modal"/></a>
+</h1>
+
 ### Timer
 - Timer was tested to see if it is visible on screen. At first, even after victory, the timer was still running. When it reached zero, Defeat Modal was shown so I added a line in the timer function to stop the timer when number of matches reaches 6.
 That solved that bug, and victory screen is no longer interrupted.
