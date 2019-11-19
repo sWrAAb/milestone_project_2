@@ -125,8 +125,9 @@ These wireframes were created using <a href="https://balsamiq.com/">**Balsamiq**
 - Add more cards.
 - Add second player.
 - Add background music.
-- Add High Score Feature to store the best scores to local storage.
+- Add High Score Feature to store the best scores to local storage and ability to enter name on your highscore.
 - When the game is finished, next level starts with less time.
+- Turn browser game into app. That would eliminte many browser restrictions.
 
 ### Removed Features 
 
@@ -166,10 +167,10 @@ Continuous testing for this application was carried throughout the entire develo
 ### Modals
 
 - Modals were tested on every screen and orientation. Added 'data-backdrop="static"' to not allow a user to click outside of the modal and close same, and `data-keyboard="false" to remove pressing ESC button to close the modals. All modal images were tested to fit all screen sizes that led to different sizes of images on Universe Select modal for each screen.
-- Victory and Defeat modals were tested to see if they redirect on Universe select modal on click.
+- Victory and Defeat modals were tested to see if they play sounds and redirect to Universe select modal on click.
 
 ### Timer
-- Timer was tested to see if it is visible on screen. At first, even after victory, the timer was still running. When it reached zero Defeat Modal was shown so I added a line in the timer function to stop the timer when number of matches reaches 6.
+- Timer was tested to see if it is visible on screen. At first, even after victory, the timer was still running. When it reached zero, Defeat Modal was shown so I added a line in the timer function to stop the timer when number of matches reaches 6.
 That solved that bug, and victory screen is no longer interrupted.
 
 ### Cards 
@@ -179,8 +180,13 @@ That solved that bug, and victory screen is no longer interrupted.
 - Display of cards was also tested on multiple devices and browsers to fit nicely without overflow (except on landscape orientation).
 - With the help Media Query I change size of cards so they use most of the screen and tested it on all available devices and aforementioned browsers for any visual distortion or functionality problems.
 
+### Fonts
 
 - Fonts are made responsive, so they are different size on every screen size.
+
+### Move Counter
+
+- Move counter was tested to see if it is displayed properly on game screen. Count would increment when second card was fliped.
 
 
 
