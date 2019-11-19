@@ -45,7 +45,7 @@
 This Milestone project uses skills learned from fourth and fifth modules of the Full
 Stack Developer Course, Javascript Fundamentals & Interactive Frontend Development, to build a custom mobile-first fully
 responsive javascript matching game called <a href="https://swraab.github.io/milestone_project_2/">**Hero Flipoff**</a>. 
-The goal of the Hero Flipoff is to provide entertaining game. 
+The goal of the Hero Flipoff is to provide an entertaining game that is fun to play. 
 
 ### Functionality of Project
 
@@ -66,11 +66,11 @@ As a player,I want:
 8. Responsive game I can play on my phone or tablet.
 9. A child-friendly game.
 
-As Developer:
-1. I want to create a pure Javascript game to test my skills.
-2. I want to create fully responsive app to showcase my skills to a potential employer.
-3. I want an on-going project I can enhance and improve over time as my skills grow.
-4. I want to learn how to create games. 
+As Developer, I want:
+1. To create a pure Javascript game to test my skills.
+2. To create fully responsive app to showcase my skills to a potential employer.
+3. An on-going project I can enhance and improve over time as my skills grow.
+4. To learn how to create games. 
 
 ### Design Choices
 
