@@ -128,6 +128,10 @@ These wireframes were created using <a href="https://balsamiq.com/">**Balsamiq**
 - Add High Score Feature to store the best scores to local storage.
 - When the game is finished, next level starts with less time.
 
+### Removed Features 
+
+ At the beginning of the development I wanted to add an animation when cards first appear, using velocity library. For some (still unknown) reason animation was overriding my css flip card animation so I removed it.
+
 [Back to Top](#table-of-contents) 
 
 ## Technologies Used
@@ -151,7 +155,37 @@ These wireframes were created using <a href="https://balsamiq.com/">**Balsamiq**
 
 ## Testing 
 
-Continuous testing for this application was carried throughout the entire development. This was achieved through the Google Chrome devtools and a host of devices, from mobile to laptop and incorporating as many of the current mainstream browsers that are popular today, (Google Chrome, Firefox, Edge, Opera & Internet Explorer). I tried to add an animation using velocity.js,
+Continuous testing for this application was carried throughout the entire development. This was achieved through the Google Chrome devtools. Game was tested on mobile phones and laptops. Every element was tested on Google Chrome, Firefox, Opera & Internet Explorer. Javascript code was tested one function at a time using console log so I can see log or any error in devtools.
+
+<h1 align="center">
+  <a href="https://github.com/sWrAAb/milestone_project_2"><img src="assets/images/test-images/test-image1.png" alt="Devtools Test Image"/></a>
+</h1>
+
+- Tried to break game by reloading several times and savagely clicking on all clickable parts of game. 
+
+### Modals
+
+- Modals were tested on every screen and orientation. Added 'data-backdrop="static"' to not allow a user to click outside of the modal and close same, and `data-keyboard="false" to remove pressing ESC button to close the modals. All modal images were tested to fit all screen sizes that led to different sizes of images on Universe Select modal for each screen.
+- Victory and Defeat modals were tested to see if they redirect on Universe select modal on click.
+
+### Timer
+- Timer was tested to see if it is visible on screen. At first, even after victory, the timer was still running. When it reached zero Defeat Modal was shown so I added a line in the timer function to stop the timer when number of matches reaches 6.
+That solved that bug, and victory screen is no longer interrupted.
+
+### Cards 
+
+- Cards were tested if they can be clicked more then once and if sound plays only on first click.
+- Bug was found in early stages of game development. Back side of card was never shown, instead card showed mirrored front side. That bug was solved by reverting game version and rewrite most of the code.
+- Display of cards was also tested on multiple devices and browsers to fit nicely without overflow (except on landscape orientation).
+- With the help Media Query I change size of cards so they use most of the screen and tested it on all available devices and aforementioned browsers for any visual distortion or functionality problems.
+
+
+- Fonts are made responsive, so they are different size on every screen size.
+
+
+
+
+
 
 ## Deployment
 
