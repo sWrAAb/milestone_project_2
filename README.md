@@ -188,11 +188,6 @@ That solved that bug, and victory screen is no longer interrupted.
 
 - Move counter was tested to see if it is displayed properly on game screen. Count would increment when second card was fliped.
 
-
-
-
-
-
 ## Deployment
 
 This project was developed using the <a href="https://code.visualstudio.com">Visual Studio Code</a>, committed to git and pushed to GitHub using the built in function within VSCode. 
@@ -240,13 +235,19 @@ All sounds were downloaded from: https://freesound.org.
 
 ### Code
 
-
-styles from: https://css-tricks.com
-
+Websites and tutorials used during the project:
+ - https://stackoverflow.com
+ - https://www.w3schools.com
+ - https://javascript.info/
+ - https://www.khanacademy.org/computing/computer-programming/programming
+ - CSS styles from: https://css-tricks.com
+ - Blinking text animation from: https://html-online.com/articles/blinking-text-css-animation/
  
-blinking text animation from: https://html-online.com/articles/blinking-text-css-animation/
- 
+### Acknowledgements
 
-###### <i>Disclaimer: This project was created for educational use only as part of the Code Institute Full Stack Software Development Course for Milestone 2 Grading!</i>
+- To my mentor, <a href="https://github.com/5pence">**Spencer Barriball**</a>, for incredible mentoring, support and for assisting during my project reviews with great critique and potential solutions.
+- To my friends and family who worked tirelessly trying to break my game. 
+
+###### <i>Disclaimer: This project was created for educational use only as part of the Code Institute Full Stack Software Development Course.</i>
 
 [Back to Top](#table-of-contents)
