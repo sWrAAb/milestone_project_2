@@ -110,7 +110,7 @@
 .game-info {
     float: left;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .button-container {
@@ -171,13 +171,13 @@ h4 {
 .dc-title-container {
     -webkit-box-shadow: 5px 10px rgba(143, 154, 255, 0.1);
     box-shadow: 5px 10px rgba(143, 154, 255, 0.1);
-    background: rgba(143, 154, 255, 0.3);
+    background: rgba(143, 154, 255, 0.4);
 }
 
 .marvel-title-container {
     -webkit-box-shadow: 5px 10px rgba(255, 142, 142, 0.1);
     box-shadow: 5px 10px rgba(255, 142, 142, 0.1);
-    background: rgba(255, 142, 142, 0.3);
+    background: rgba(255, 142, 142, 0.4);
 }
 
 .top-buttons {
