@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+.hero-game {
+    width: 640px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
 
 /*-----Starting Page-----*/
 
@@ -34,17 +46,8 @@
 
 /*-----/Starting Page-----*/
 
-.hero-game {
-    width: 640px;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-}
+
+/*----Cards and Flips----*/
 
 .hero-card {
     width: 86px;
@@ -98,6 +101,12 @@
     background: aliceblue;
 }
 
+
+/*----/Cards and Flips----*/
+
+
+/*----Game info----*/
+
 .game-info {
     float: left;
     font-family: 'Ubuntu', sans-serif;
@@ -107,6 +116,9 @@
 .button-container {
     height: 40px;
 }
+
+
+/*----/Game info----*/
 
 
 /*----Fonts----*/
@@ -123,27 +135,30 @@ h2 {
     text-shadow: 2px 2px #ffffff;
 }
 
+h4 {
+    text-align: center;
+    font-family: "Bangers", cursive, sans-serif;
+    font-size: 40px;
+    text-shadow: 2px 2px #db5656;
+}
+
 .red-text {
     color: red;
 }
 
-.dc-background {
-    background-image: url("../images/dc/dc_background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    min-height: 100vh;
+.blinking {
+    margin: auto auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 34px;
+    -webkit-animation: blinkingText 1.6s infinite ease-in-out;
+    animation: blinkingText 1.6s infinite ease-in-out;
 }
 
-.marvel-background {
-    background-image: url("../images/marvel/marvel_background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
+
+/*----/Fonts----*/
+
+
+/*----Title Containers----*/
 
 .title-container {
     margin: auto;
@@ -173,6 +188,9 @@ h2 {
 }
 
 
+/*----/Title Containers----*/
+
+
 /*----Cursors----*/
 
 .blue-cursor {
@@ -186,6 +204,27 @@ h2 {
 
 /*----/Cursors----*/
 
+
+/*----Background Images----*/
+
+.dc-background {
+    background-image: url("../images/dc/dc_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.marvel-background {
+    background-image: url("../images/marvel/marvel_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
 .victory-bg {
     background-image: url("../images/victory.jpg");
     background-repeat: no-repeat;
@@ -194,6 +233,9 @@ h2 {
     height: 100vh;
     width: 100vw;
 }
+
+
+/*----/Background Images----*/
 
 
 /*-----Modal-----*/
@@ -247,13 +289,8 @@ h2 {
     text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.blinking {
-    margin: auto auto;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 34px;
-    -webkit-animation: blinkingText 1.6s infinite ease-in-out;
-    animation: blinkingText 1.6s infinite ease-in-out;
-}
+
+/*-----/Modal-----*/
 
 @-webkit-keyframes blinkingText {
     0% {
@@ -295,13 +332,6 @@ h2 {
     100% {
         color: #000;
     }
-}
-
-h4 {
-    text-align: center;
-    font-family: "Bangers", cursive, sans-serif;
-    font-size: 40px;
-    text-shadow: 2px 2px #db5656;
 }
 
 @media screen and (min-width: 360px) {

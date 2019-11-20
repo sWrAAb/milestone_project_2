@@ -1,3 +1,5 @@
+/* Modals and jQuery */
+
 $("#restart-game-modal").modal("show");
 $("#body-wrapper").addClass("d-none");
 
@@ -37,6 +39,7 @@ $("#defeat-modal").click(function() {
     location.reload();
 });
 
+/* Buttons */
 
 $(".restart-button").click(function() {
     location.reload();
@@ -64,7 +67,7 @@ var defeatSound = document.getElementById("defeatAudio");
 var victorySound = document.getElementById("victoryAudio");
 var sounds = document.getElementsByTagName("audio");
 
-
+/* Toggle Mute */
 
 $("#mute-button").click(function() {
     if (isSoundOn) {
@@ -80,10 +83,13 @@ $("#mute-button").click(function() {
     }
 });
 
+/* Toggle sound icon */
+
 function myFunction(x) {
     x.classList.toggle("fa-volume-up");
 };
 
+/* Flip */
 
 function flipCard() {
     if (lockBoard) return;
@@ -100,6 +106,8 @@ function flipCard() {
     flipSound.play();
 };
 
+/* End Game Events */
+
 function victory() {
     victorySound.play();
     $("#victory-modal").modal("show");
@@ -110,6 +118,8 @@ function defeat() {
     defeatSound.play();
     $("#defeat-modal").modal("show");
 };
+
+/* Timer */
 
 function timer() {
     var count = 60,
@@ -124,6 +134,8 @@ function timer() {
             }
         }, 1000);
 };
+
+/* Chech for match*/
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -143,11 +155,15 @@ function checkForMatch() {
     }, 1000);
 };
 
+/* Removes ability to click card */
+
 function disableCards() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
     resetBoard();
 };
+
+/* Unflip cards */
 
 function unflipCards() {
     lockBoard = true;
@@ -162,6 +178,8 @@ function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 };
+
+/* Shuffle cards */
 
 (function shuffle() {
     cards.forEach(card => {
